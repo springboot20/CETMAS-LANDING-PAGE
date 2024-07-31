@@ -7,7 +7,7 @@ export const ClientDashBoard: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           <Card
             className={"bg-[#9747FF66]"}
             title={"posted jobs"}
@@ -71,7 +71,7 @@ const Card: React.FC<{
           <p className="capitalize text-base">this month</p>
         </div>
       </div>
-      <div className="self-end">
+      <div className="self-end h-28">
         <svg
           width="119"
           height="76"

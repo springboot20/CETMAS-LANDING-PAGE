@@ -1,78 +1,78 @@
-import React,{useState} from 'react';
-import { Card } from '../../../components/card/Card';
-import { RequestedJobs } from './components/RequestedJobs';
-import { RecommendedJobs } from './components/RecommendedJobs';
-import { Calendar } from '@/shadcn/ui/calendar';
+import React, { useState } from "react";
+import { Card } from "../../../components/card/Card";
+import { RequestedJobs } from "./components/RequestedJobs";
+import { RecommendedJobs } from "./components/RecommendedJobs";
+import { Calendar } from "@/shadcn/ui/calendar";
+import { GraphIcon } from "@/components/Icons";
 
 export const TalentDashBoard: React.FC = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
   return (
-    <section className='mt-32 px-4 lg:px-10'>
-      <div className='mx-auto space-y-10'>
-        <div className='grid grid-cols-4 xl:grid-cols-6 gap-6'>
-          <div className='grid grid-cols-1 gap-2 md:grid-cols-3 2xl:gap-8  xl:col-span-4 col-span-full place-contents-center place-items-center'>
-            <Card className='lg:h-56 flex items-center justify-between col-span-full sm:col-span-1 bg-[#9747FF66] w-full'>
-              <div className='space-y-3 lg:space-y-5'>
-                <p>
-                  <span className='text-xl md:text-3xl xl:text-5xl font-bold block text-gray-800'>
-                    100
-                  </span>
-                  <span className='block text-base capitalize xl:text-lg font-normal text-gray-700'>
-                    jobs done
-                  </span>
-                </p>
-                <p>
-                  <span className='text-lg md:text-xl lg:text-2xl font-bold block text-gray-800'>
-                    +30
-                  </span>
-                  <span className='text-base font-normal block text-gray-500'>This week</span>
+    <section className="mt-32 px-4 lg:px-10">
+      <div className="mx-auto space-y-10">
+        <div className="grid grid-cols-4 xl:grid-cols-6 gap-6">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-6 xl:col-span-4 col-span-full place-contents-center place-items-center">
+            <Card className="shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
+              <div className="space-y-3 lg:space-y-4 w-full">
+                <h3 className="capitalize font-semibold block text-gray-700">
+                  jobs done
+                </h3>
+                <h2 className="block text-base sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+                  10
+                </h2>
+                <p className="text-base font-normal text-gray-500">
+                  +30 This week
                 </p>
               </div>
-            </Card>
-            <Card className='lg:h-56 flex items-center justify-between col-span-full sm:col-span-1 bg-[#4632A866] w-full'>
-              <div className='space-y-3 lg:space-y-5'>
-                <p>
-                  <span className='text-xl md:text-3xl xl:text-5xl font-bold block text-gray-800'>
-                    100
-                  </span>
-                  <span className='block text-base capitalize xl:text-lg font-normal text-gray-700'>
-                    jobs done
-                  </span>
-                </p>
-                <p>
-                  <span className='text-lg md:text-xl lg:text-2xl font-bold block text-gray-800'>
-                    +30
-                  </span>
-                  <span className='text-base font-normal block text-gray-500'>This week</span>
-                </p>
+
+              <div className="self-end">
+                <GraphIcon className="h-24" />
               </div>
             </Card>
-            <Card className='lg:h-56 flex items-center justify-between col-span-full sm:col-span-1 bg-[#A79BE166]  w-full'>
-              <div className='space-y-3 lg:space-y-5  '>
-                <p>
-                  <span className='text-xl md:text-3xl xl:text-5xl font-bold block text-gray-800'>
-                    100
-                  </span>
-                  <span className='block text-base capitalize xl:text-lg font-normal text-gray-700'>
-                    total jobs
-                  </span>
+
+            <Card className="shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
+              <div className="space-y-3 lg:space-y-4 w-full">
+                <h3 className="capitalize font-semibold text-gray-700">
+                pending job request
+                </h3>
+                <h2 className="block text-base sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+                  10
+                </h2>
+                <p className="text-base font-normal text-gray-500">
+                  +30 This week
                 </p>
-                <p>
-                  <span className='text-lg md:text-xl lg:text-2xl font-bold block text-gray-800'>
-                    +30
-                  </span>
-                  <span className='text-base font-normal block text-gray-500'>This week</span>
+              </div>
+
+              <div className="self-end">
+                <GraphIcon className="h-24" />
+              </div>
+            </Card>
+
+            <Card className="shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
+              <div className="space-y-3 lg:space-y-4 w-full">
+                <h3 className="capitalize font-semibold block text-gray-700">
+               total job
+                </h3>
+                <h2 className="block text-base sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+                  20
+                </h2>
+                <p className="text-base font-normal text-gray-500">
+                  +30 This week
                 </p>
+              </div>
+
+              <div className="self-end">
+                <GraphIcon className="h-24" />
               </div>
             </Card>
           </div>
 
           <Calendar
-            mode='single'
+            mode="single"
             selected={date}
             onSelect={setDate}
-            className='rounded-xl border col-span-full sm:col-span-1 sm:w-[30rem] lg:w-full p-8 lg:col-span-2 gap-10 bg-[#00000033] z-10'
+            className="rounded-3xl xl:w-full border col-span-full sm:col-span-1 sm:w-[30rem] p-6 lg:col-span-2 bg-[#A79BE1B2]/20 z-10"
           />
         </div>
 

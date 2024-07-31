@@ -39,8 +39,8 @@ export const JobCard: React.FC<JobCardProps> = (props) => {
         </p>
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-        <div className="space-x-3">
+      <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row justify-between items-center gap-2">
+        <div className="flex gap-3 items-center flex-wrap">
           <Button severity="secondary" size="small" className="px-4 py-1.5">
             <span> {props.duration} months </span>
           </Button>
@@ -59,7 +59,7 @@ export const JobCard: React.FC<JobCardProps> = (props) => {
             {props.type}
           </Button>
         </div>
-        <button className="mt-7 sm:mt-0 text-base font-normal px-5 py-2.5 rounded-lg border border-[#4632A8] text-[#4632A8]">
+        <button className="mt-5 sm:mt-0 text-base font-normal px-4 xl:px-5 py-2.5 rounded-lg border border-[#4632A8] text-[#4632A8]">
           Move to pending
         </button>
       </div>

@@ -108,17 +108,17 @@ export const TalentLayout: React.FC = () => {
             {/* Navigation starts */}
 
             {/* Main section starts */}
-            <main className="absolute w-full left-0 lg:w-[calc(100%-9rem)] lg:left-36 min-h-screen right-0">
+            <main className="absolute w-full left-0 lg:w-[calc(100%-8rem)] lg:left-32  min-h-screen right-0">
               <div className="w-full relative flex flex-col justify-between h-full">
                 <header
                   className={classNames(
-                    "fixed top-0 right-0 h-28 left-0 lg:left-36 xl:px-20 p-8 bg-[#F9F9F9] mx-auto z-20",
-                    scrolling ? "lg:bg-[#F9F9F9]" : "g:bg-transparent",
+                    "fixed top-0 right-0 h-20 sm:h-24 left-0 lg:left-32 bg-[#F9F9F9] px-4 sm:px-10 z-20",
+                    scrolling ? "lg:bg-[#F9F9F9] border-b-2" : "lg:bg-transparent",
                   )}
                 >
                   <div className="flex justify-between items-center h-full">
                     <div className="flex items-start space-x-4">
-                      <h3 className="text-3xl font-bold lg:text-2xl xl:text-4xl capitalize text-gray-800">
+                      <h3 className="text-xl sm:text-3xl font-bold lg:text-2xl xl:text-4xl capitalize text-gray-800">
                         {displayText}
                       </h3>
                     </div>
@@ -135,7 +135,7 @@ export const TalentLayout: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => setOpenNotification(true)}
-                        className="rounded-full h-12 w-12 border border-gray-800 flex items-center justify-center"
+                        className="rounded-full h-10 w-10 sm:h-12 sm:w-12 border border-gray-800 flex items-center justify-center"
                       >
                         <span className="sr-only">open notification</span>
                         <BellIcon className="fill-gray-800" />
@@ -144,7 +144,7 @@ export const TalentLayout: React.FC = () => {
                         <DisclosureButton className="inline-flex items-center justify-center rounded-md text-gray-900">
                           <span className="sr-only">Open Menu</span>
                           <Bars3Icon
-                            className="block h-10 w-10"
+                            className="block w-8 h-8 sm:h-10 sm:w-10"
                             aria-hidden="true"
                           />
                         </DisclosureButton>

@@ -32,25 +32,25 @@ export const DashBoardNavigation: React.FC<{
       <>
         <div
           className={classNames(
-            `hidden lg:flex fixed left-0 top-0 h-screen lg:bg-black w-36 p-5 flex-col items-center`,
+            `hidden lg:flex fixed left-0 top-0 h-screen lg:bg-black w-32 flex-col items-center`,
           )}
         >
           <div
             className={classNames(
-              "hidden lg:flex flex-col items-center h-full",
+              "hidden lg:flex flex-col items-center h-full w-full",
               !pathname.includes("/admin") ? "justify-between" : "gap-10",
             )}
           >
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 w-full">
               {/* logo container starts */}
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center self-stretch h-20">
-                  <img src={Logo} alt="cetmas logo" className="w-22" />
+                  <img src={Logo} alt="cetmas logo" className="w-24" />
                 </div>
               </div>
               {/* logo container ends */}
 
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center w-full">
                 {routes.map(({ label, Icon, to, current }) => (
                   <NavItem
                     to={to}
@@ -59,7 +59,7 @@ export const DashBoardNavigation: React.FC<{
                     activeClass='before:content-[" "] before:absolute before:h-full before:bg-white before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
                     className={classNames(
                       current ? "hover:bg-white/20 " : "",
-                      'flex-col py-6 px-7 w-full transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all',
+                      'flex-col py-6 px-7 w-full transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all relative',
                     )}
                   >
                     {({ isActive }) => (
@@ -123,9 +123,9 @@ export const DashBoardNavigation: React.FC<{
                 <XMarkIcon className="h-8 w-8 text-gray-100" />
               </DisclosureButton>
 
-              <div className="flex flex-col gap-20">
+              <div className="flex flex-col gap-5">
                 {/* logo container starts */}
-                <div className="flex items-center p-4 w-full">
+                <div className="flex items-center mb-6 w-full">
                   <img src={Logo} alt="cetmas logo" className="w-28" />
                 </div>
                 {/* logo container ends */}

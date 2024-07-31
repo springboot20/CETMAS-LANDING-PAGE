@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 const JobCard: React.FC = () => (
-  <motion.div className="sm:w-[25rem] bg-white flex flex-col flex-shrink-0 flex-grow space-y-4 p-7 sm:p-9 rounded-xl w-full">
+  <motion.div className="w-[25rem] bg-white flex flex-col flex-shrink-0 flex-grow space-y-4 p-7 sm:p-9 rounded-xl ">
     <h3 className="text-xl lg:text-2xl font-bold capitalize">
       mobile app developer{" "}
     </h3>

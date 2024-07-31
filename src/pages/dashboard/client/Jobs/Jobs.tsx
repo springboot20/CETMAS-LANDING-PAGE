@@ -33,7 +33,7 @@ export const ClientJobs = () => {
   });
 
   return (
-    <section className="mt-32 p-4 lg:px-10">
+    <section className="mt-32 px-4 lg:px-10">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 sm:gap-8">
         <div className="md:col-span-2">
           <header className="flex items-center justify-between">
@@ -67,7 +67,7 @@ export const ClientJobs = () => {
                         jobStatus === "posted"
                           ? "before:bg-[#4632A8] text-white before:w-full before:rounded-t-md"
                           : "text-gray-500 before:w-0",
-                        'curor-pointer lg:w-1/2 group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white hover:before:rounded-t-md',
+                        'curor-pointer group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white hover:before:rounded-t-md',
                       )}
                     >
                       <span className="relative">posted jobs</span>
@@ -80,7 +80,7 @@ export const ClientJobs = () => {
                         jobStatus === "pending"
                           ? "before:bg-[#4632A8] text-white before:w-full"
                           : "text-gray-500 before:w-0",
-                        'curor-pointer lg:w-1/2 group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
+                        'curor-pointer group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
                       )}
                     >
                       <span className="relative">pending jobs</span>
@@ -93,7 +93,7 @@ export const ClientJobs = () => {
                         jobStatus === "completed"
                           ? "before:bg-[#4632A8] text-white before:w-full before:rounded-b-md"
                           : "text-gray-500 before:w-0",
-                        'curor-pointer lg:w-1/2 group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white hover:before:rounded-b-md',
+                        'curor-pointer group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white hover:before:rounded-b-md',
                       )}
                     >
                       <span className="relative">completed jobs</span>
@@ -118,7 +118,7 @@ export const ClientJobs = () => {
           <div className="mt-5 bg-white rounded-xl">
             <ul
               ref={statusList}
-              className="h-full py-10 space-y-3"
+              className="h-full lg:py-10 space-y-3"
               id="job-status-list"
             >
               <li
@@ -127,9 +127,9 @@ export const ClientJobs = () => {
                 data-status="posted"
                 className={classNames(
                   jobStatus === "posted"
-                    ? "before:bg-[#4632A8] text-white before:w-full"
+                    ? "before:bg-[#4632A8] text-white before:w-full before:rounded-t-xl"
                     : "text-gray-500 before:w-0",
-                  'curor-pointer lg:w-1/2 group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
+                  'curor-pointer group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
                 )}
               >
                 <span className="relative">posted jobs</span>
@@ -143,7 +143,7 @@ export const ClientJobs = () => {
                   jobStatus === "pending"
                     ? "before:bg-[#4632A8] text-white before:w-full"
                     : "text-gray-500 before:w-0",
-                  'curor-pointer lg:w-1/2 group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
+                  'curor-pointer group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
                 )}
               >
                 <span className="relative">pending jobs</span>
@@ -155,9 +155,9 @@ export const ClientJobs = () => {
                 onClick={() => setJobStatus("completed")}
                 className={classNames(
                   jobStatus === "completed"
-                    ? "before:bg-[#4632A8] text-white before:w-full"
+                    ? "before:bg-[#4632A8] text-white before:w-full before:rounded-b-xl"
                     : "text-gray-500 before:w-0",
-                  'curor-pointer lg:w-1/2 group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
+                  'curor-pointer group flex items-center relative before:absolute before:content-[" "] before:h-full before:left-0 lg:before:rounded-r-[2.5rem] text-base font-medium sm:text-lg capitalize py-5 before:transition-all px-4 hover:before:bg-[#4632A8] hover:before:w-full hover:text-white',
                 )}
               >
                 <span className="relative">completed jobs</span>

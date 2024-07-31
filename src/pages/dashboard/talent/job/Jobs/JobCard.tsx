@@ -35,7 +35,7 @@ export const JobCard: React.FC<JobCardProps> = (props) => {
       </div>
 
       <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-        <div className="space-x-3">
+        <div className="flex flex-wrap items-center gap-2">
           <Button severity="secondary" size="small" className="px-4 py-1.5">
             <span> {props.duration} months </span>
           </Button>

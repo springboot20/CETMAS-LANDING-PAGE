@@ -40,7 +40,7 @@ export const RecommendedJobs: React.FC = () => {
 
 const RecommendedJobCard = () => {
   return (
-    <motion.div className="bg-white flex flex-col flex-grow p-7 sm:w-[25rem] flex-shrink-0 rounded-xl">
+    <motion.div className="bg-white flex flex-col flex-grow p-7 w-[25rem] flex-shrink-0 rounded-xl">
       <h3 className="text-xl lg:text-2xl font-bold capitalize">
         mobile app developer
       </h3>
