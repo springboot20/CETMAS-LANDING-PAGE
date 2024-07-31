@@ -40,7 +40,7 @@ export const PendingJobs = () => {
 
 const Card = () => {
   return (
-    <div className="bg-white flex flex-col p-8 flex-grow sm:w-[26rem] flex-shrink-0 rounded-xl">
+    <div className="bg-white flex flex-col p-8 flex-grow w-[26rem] flex-shrink-0 rounded-xl">
       <header className="flex items-start justify-between">
         <h3 className="text-xl lg:text-2xl font-bold capitalize">
           mobile app developer

@@ -162,7 +162,7 @@ export const DashBoardNavigation: React.FC<{
                             </motion.div>
                             <motion.span
                               {...framerText(idx, open)}
-                              className="text-lg font-normal capitalize"
+                              className="text-lg font-normal text-white capitalize"
                             >
                               {label}
                             </motion.span>
@@ -187,7 +187,7 @@ export const DashBoardNavigation: React.FC<{
                           isActive ? "fill-white" : "fill-gray-100",
                         )}
                       />
-                      <span className="text-lg font-normal capitalize">
+                      <span className="text-white text-lg font-normal capitalize">
                         logout{" "}
                       </span>
                     </>
