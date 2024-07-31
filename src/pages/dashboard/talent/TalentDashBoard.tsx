@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "../../../components/card/Card";
 import { RequestedJobs } from "./components/RequestedJobs";
 import { RecommendedJobs } from "./components/RecommendedJobs";
-import { Calendar } from "@/shadcn/ui/calendar";
 import { GraphIcon } from "@/components/Icons";
+import { Calendar } from "@/components/calender/Calendar";
 
 export const TalentDashBoard: React.FC = () => {
-  const [date, setDate] = useState<Date | undefined>(new Date());
 
+  
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
         <div className="grid grid-cols-4 xl:grid-cols-6 gap-6">
-          <div className="grid grid-cols-1 gap-2 lg:grid-cols-3 lg:gap-6 xl:col-span-4 col-span-full place-contents-center place-items-center">
-            <Card className="shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 xl:grid-cols-3 lg:gap-6 xl:col-span-4 col-span-full place-contents-center place-items-center">
+            <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
               <div className="space-y-3 lg:space-y-4 w-full">
                 <h3 className="capitalize font-semibold block text-gray-700">
                   jobs done
@@ -31,7 +31,7 @@ export const TalentDashBoard: React.FC = () => {
               </div>
             </Card>
 
-            <Card className="shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
+            <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
               <div className="space-y-3 lg:space-y-4 w-full">
                 <h3 className="capitalize font-semibold text-gray-700">
                 pending job request
@@ -49,7 +49,7 @@ export const TalentDashBoard: React.FC = () => {
               </div>
             </Card>
 
-            <Card className="shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
+            <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
               <div className="space-y-3 lg:space-y-4 w-full">
                 <h3 className="capitalize font-semibold block text-gray-700">
                total job
@@ -67,13 +67,7 @@ export const TalentDashBoard: React.FC = () => {
               </div>
             </Card>
           </div>
-
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="rounded-3xl xl:w-full border col-span-full sm:col-span-1 sm:w-[30rem] p-6 lg:col-span-2 bg-[#A79BE1B2]/20 z-10"
-          />
+          <Calendar />
         </div>
 
         {/* Requested Jobs starts*/}

@@ -5,5 +5,5 @@ export const Card: React.FC<{ children: React.ReactNode; className: string }> = 
   children,
   className,
 }) => {
-  return <div className={classNames('shadow-md p-5', className)}>{children}</div>;
+  return <div className={classNames('shadow-md p-4', className)}>{children}</div>;
 };

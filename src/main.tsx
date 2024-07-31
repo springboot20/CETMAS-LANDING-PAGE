@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
+import { CalenderProvider } from "./context/CalenderContext.tsx";
 
-ReactDOM.createRoot(
-  document.getElementById("root")!,
-).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <CalenderProvider>
+      <App />
+    </CalenderProvider>
   </React.StrictMode>,
 );
