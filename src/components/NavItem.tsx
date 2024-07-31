@@ -23,7 +23,7 @@ export const NavItem: React.FC<NavItemProps> = ({
       className={({ isActive }) =>
         classNames(
           'flex items-center relative transition ease delay-400',
-          isActive ? classNames('bg-white/20 text-white', activeClass) : 'text-gray-100',
+          isActive ? classNames('bg-white/20 text-gray-700', activeClass) : 'text-gray-900',
           className
         )
       }

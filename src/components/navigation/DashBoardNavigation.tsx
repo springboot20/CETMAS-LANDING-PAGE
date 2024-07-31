@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/cetmas-logo.png";
 import { SignOutIcon } from "@/components/Icons";
 import { NavItem } from "@/components/NavItem";
 import { classNames } from "@/util";
@@ -32,7 +32,7 @@ export const DashBoardNavigation: React.FC<{
       <>
         <div
           className={classNames(
-            `hidden lg:flex fixed left-0 top-0 h-screen lg:bg-black w-32 flex-col items-center`,
+            `hidden lg:flex fixed left-0 top-0 h-screen lg:bg-[#F9F9F9] w-32 flex-col items-center before:right-0 before:top-0 before:h-full before:w-1 before:bg-gray-200 before:absolute`,
           )}
         >
           <div
@@ -43,7 +43,7 @@ export const DashBoardNavigation: React.FC<{
           >
             <div className="flex flex-col gap-10 w-full">
               {/* logo container starts */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center mt-5">
                 <div className="flex items-center justify-center self-stretch h-20">
                   <img src={Logo} alt="cetmas logo" className="w-24" />
                 </div>
@@ -56,9 +56,9 @@ export const DashBoardNavigation: React.FC<{
                     to={to}
                     key={to}
                     aria-current={current ? "page" : undefined}
-                    activeClass='before:content-[" "] before:absolute before:h-full before:bg-white before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
+                    activeClass='before:content-[" "] before:absolute before:h-full before:bg-[#4632A8] before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
                     className={classNames(
-                      current ? "hover:bg-white/20 " : "",
+                      current ? "hover:bg-gray-200 " : "",
                       'flex-col py-6 px-7 w-full transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all relative',
                     )}
                   >
@@ -66,7 +66,7 @@ export const DashBoardNavigation: React.FC<{
                       <>
                         <Icon
                           className={classNames(
-                            isActive ? "fill-white" : "fill-gray-100",
+                            isActive ? "fill-gray-800" : "fill-gray-900",
                           )}
                         />
                         <span className="text-lg font-normal capitalize">
@@ -85,14 +85,14 @@ export const DashBoardNavigation: React.FC<{
                   to="/"
                   activeClass='before:content-[" "] before:absolute before:h-full before:bg-white before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
                   className={
-                    'flex-col py-6 px-7 w-full hover:bg-white/20 transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
+                    'flex-col py-6 px-7 w-full hover:bg-gray-200 transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
                   }
                 >
                   {({ isActive }) => (
                     <>
                       <SignOutIcon
                         className={classNames(
-                          isActive ? "fill-white" : "fill-gray-100",
+                          isActive ? "fill-gray-800" : "fill-gray-900",
                         )}
                       />
                       <span className="text-lg font-normal capitalize">

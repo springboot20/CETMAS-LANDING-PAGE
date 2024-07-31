@@ -6,7 +6,7 @@ import { JobCardProps } from "@/types/jobs";
 
 export const JobCard: React.FC<JobCardProps> = (props) => {
   return (
-    <Card className="bg-[#A79BE1B2]/20 rounded-xl px-6 md:px-10">
+    <Card className="bg-[#A79BE1B2]/20 rounded-xl p-6 md:p-10">
       <header className="flex justify-between items-start">
         <div className="space-y-2">
           <h1 className="text-xl lg:text-3xl font-bold capitalize">
@@ -59,7 +59,7 @@ export const JobCard: React.FC<JobCardProps> = (props) => {
             {props.type}
           </Button>
         </div>
-        <button className="mt-5 sm:mt-0 text-base font-normal px-4 xl:px-5 py-2.5 rounded-lg border border-[#4632A8] text-[#4632A8]">
+        <button className="mt-5 sm:mt-0 text-base font-normal px-4 py-2.5 lg:py-1.5 lg:px-2.5 xl:px-5  rounded-lg border border-[#4632A8] text-[#4632A8]">
           Move to pending
         </button>
       </div>
