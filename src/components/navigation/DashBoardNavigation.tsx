@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "@/assets/cetmas-logo.png";
+import mobileLogo from "@/assets/logo.png";
 import { SignOutIcon } from "@/components/Icons";
 import { NavItem } from "@/components/NavItem";
 import { classNames } from "@/util";
@@ -126,7 +127,7 @@ export const DashBoardNavigation: React.FC<{
               <div className="flex flex-col gap-5">
                 {/* logo container starts */}
                 <div className="flex items-center mb-6 w-full">
-                  <img src={Logo} alt="cetmas logo" className="w-28" />
+                  <img src={mobileLogo} alt="cetmas logo" className="w-28" />
                 </div>
                 {/* logo container ends */}
 
