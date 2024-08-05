@@ -17,14 +17,14 @@ export const Calendar: React.FC = () => {
   } = useCalendar();
 
   return (
-    <div className="rounded-xl bg-[#A79BE1B2]/20 p-4 sm:p-6 max-w-xl col-span-full sm:col-span-2">
+    <div className="rounded-xl bg-[#A79BE1B2]/20 p-4 sm:max-w-sm xl:max-w-[26.5rem] w-full sm:col-span-2">
       <div className="flex items-center justify-between">
         <h2 className="flex-auto font-semibold text-gray-900 text-lg capitalize">
           {format(firstDayCurrentMonth, "MMM yyyy")}
         </h2>
         <button
           onClick={handlePrevMonth}
-          className="flex flex-none items-center justify-center p-1.5 my-1.5"
+          className="flex flex-none items-center justify-center p-1 my-1"
         >
           <span className="sr-only">Previous month</span>
           <ChevronLeftIcon
@@ -35,7 +35,7 @@ export const Calendar: React.FC = () => {
         </button>
         <button
           onClick={handleNextMonth}
-          className="flex flex-none items-center justify-center p-1.5 my-1.5"
+          className="flex flex-none items-center justify-center p-1 my-1"
         >
           <span className="sr-only">Next month</span>
           <ChevronRightIcon
@@ -79,10 +79,10 @@ export const Calendar: React.FC = () => {
                 isEqual(day, selectedDay) && !isToday(day) && "bg-gray-400",
                 isToday(day) && "bg-[#4632A8] text-white",
                 isEqual(day, selectedDay) && isToday(day) && "font-semibold ",
-                "h-8 w-8 mx-auto flex transition text-sm items-center justify-center rounded-full cursor-pointer",
+                "h-6 w-6 mx-auto flex transition text-sm items-center justify-center rounded-full cursor-pointer",
               )}
             >
-              <time dateTime={format(day, "d")}>
+              <time dateTime={format(day, "yyyy-MMM-d")}>
                 {day.getDate().toString().split("-").pop()?.replace(/^0/, "")}
               </time>
             </button>

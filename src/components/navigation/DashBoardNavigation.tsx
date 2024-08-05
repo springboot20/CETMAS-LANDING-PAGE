@@ -42,7 +42,7 @@ export const DashBoardNavigation: React.FC<{
               !pathname.includes("/admin") ? "justify-between" : "gap-10",
             )}
           >
-            <div className="flex flex-col gap-10 w-full">
+            <div className="flex flex-col gap-8 w-full">
               {/* logo container starts */}
               <div className="flex flex-col items-center mt-5">
                 <div className="flex items-center justify-center self-stretch h-20">
