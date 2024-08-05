@@ -5,7 +5,7 @@ export const Applicants: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
           <TalentCard />
           <TalentCard />
           <TalentCard />
@@ -29,7 +29,7 @@ export const TalentCard = () => {
   const { pathname } = useLocation();
 
   return (
-    <div className="p-8 rounded-3xl bg-white border shadow-sm flex flex-col space-y-10 items-center justify-center">
+    <div className="p-8 rounded-2xl bg-white border shadow-sm flex flex-col space-y-10 items-center justify-center">
       <div>
         <div className="h-36 w-36 rounded-full border bg-white"></div>
       </div>
