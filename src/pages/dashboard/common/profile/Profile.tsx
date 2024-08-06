@@ -24,20 +24,14 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
       setProfilePicture(event.target.files[0]);
     }
 
-    if (profilePicture) {
-      const fileExt = profilePicture.name.split(".").pop();
-      if (fileExt) {
-        const extExists = isFileExtValid(fileExtensions, `.${fileExt}`);
-        console.log(extExists);
+    const fileExt = profilePicture.name.split(".").pop();
+    const extExists = isFileExtValid(fileExtensions, `.${fileExt}`);
 
-        if (!extExists) {
-          alert("Invalid file extension");
-          return;
-        }
-      }
+    if (!extExists) {
+      alert("Invalid file extension");
+    } else {
+      formData.append("profile-picture", profilePicture as Blob);
     }
-
-    formData.append("profile-picture", profilePicture as Blob);
   };
 
   const handleActive = () => {
@@ -45,7 +39,7 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
   };
 
   return (
-    <section className="mt-32 px-4 xl:px-20">
+    <section className="mt-32 px-4 xl:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 xl:gap-14">
         <div className="space-y-10 col-span-full lg:col-span-2">
           <div className="flex items-center justify-center flex-col">
@@ -98,10 +92,10 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
             </div>
 
             <div className="text-center">
-              <h3 className="text-base font-bold sm:text-xl capitalize lg:text-2xl">
+              <h3 className="text-base font-bold sm:text-lg capitalize lg:text-xl">
                 jane william
               </h3>
-              <p className="text-base font-medium text-gray-800 sm:text-xl lg:text-2xl capitalize">
+              <p className="text-base font-medium text-gray-800 sm:text-xl lg:text-xl capitalize">
                 product designer
               </p>
             </div>
@@ -109,10 +103,10 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
 
           <Card className="flex items-center justify-between bg-[#A79BE1B2]/20 rounded-xl px-10">
             <div>
-              <h1 className="text-lg lg:text-2xl font-bold capitalize text-gray-800">
+              <h1 className="text-lg lg:text-xl font-bold capitalize text-gray-800">
                 availability
               </h1>
-              <span className="inline-block text-sm sm:text-base font-normal text-gray-700 capitalize">
+              <span className="inline-block text-xs sm:text-sm font-normal text-gray-700 capitalize">
                 available to work
               </span>
             </div>
