@@ -29,24 +29,26 @@ export const Wallet: React.FC = () => {
     setOpen(false);
   };
 
+  console.log(pathname.split("/").includes("client"));
+
   return (
     <>
       <WithdrawModal isOpen={open} close={handleClose} />
-      <section className="mt-32 px-4 lg:px-20">
+      <section className="mt-32 px-4 lg:px-10">
         <div className="mx-auto space-y-10">
           <div className="space-y-10">
             <Card className="relative bg-[#4632A8] rounded-3xl xl:p-12">
               <BackgroundIcon className="absolute w-full left-0 h-full top-0" />
-              {pathname.includes("/client") ||
-                (pathname.includes("/admin") && (
-                  <button className="absolute right-5 top-5">
-                    <span className="sr-only">open menu</span>
-                    <EllipsisVertical
-                      className="h-8 text-white"
-                      aria-hidden={true}
-                    />
-                  </button>
-                ))}
+              {pathname.split("/").includes("client") ||
+              pathname.split("/").includes("admin") ? (
+                <button className="absolute right-5 top-5">
+                  <span className="sr-only">open menu</span>
+                  <EllipsisVertical
+                    className="h-8 text-white"
+                    aria-hidden={true}
+                  />
+                </button>
+              ) : null}
               <div className="gap-5 grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center z-10 relative lg:gap-10">
                 <Card className="w-full bg-white/30 rounded-2xl flex items-center flex-col justify-center gap-20 h-full py-10  text-white">
                   <h3 className="capitalize text-2xl sm:text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
@@ -61,9 +63,9 @@ export const Wallet: React.FC = () => {
                   <h1 className="text-lg md:text-xl lg:text-2xl capitalize text-white font-semibold">
                     this month
                   </h1>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-                    <div className="p-6 bg-white/30 rounded-2xl flex items-start flex-col justify-between text-white w-full flex-shrink-0 h-44">
-                      <div className="flex items-start justify-between w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                    <div className="p-6 bg-white/30 rounded-2xl flex items-start flex-col justify-between text-white w-full flex-shrink-0 h-44 lg:h-40">
+                      <div className="flex items-center justify-between w-full">
                         <h3 className="capitalize text-xl sm:text-lg lg:text-xl font-normal tracking-wide">
                           received
                         </h3>
@@ -71,12 +73,12 @@ export const Wallet: React.FC = () => {
                           <ArrowLineDownIcon />
                         </span>
                       </div>
-                      <span className="text-lg md:text-2xl font-bold tracking-widest">
+                      <span className="text-lg sm:text-xl xl:text-2xl font-bold tracking-widest">
                         {formatPrice(walletBalance)}
                       </span>
                     </div>
 
-                    <div className="p-6 bg-white/30 rounded-2xl flex items-start flex-col justify-between text-white w-full flex-shrink-0 h-44">
+                    <div className="p-6 bg-white/30 rounded-2xl flex items-start flex-col justify-between text-white w-full flex-shrink-0 h-44 lg:h-40">
                       <div className="flex items-center justify-between w-full">
                         <h3 className="capitalize text-xl sm:text-lg lg:text-xl font-normal tracking-wide">
                           sent
@@ -85,7 +87,7 @@ export const Wallet: React.FC = () => {
                           <ArrowLineUpIcon />
                         </span>
                       </div>
-                      <span className="text-lg md:text-2xl font-bold tracking-widest">
+                      <span className="text-lg sm:text-xl xl:text-2xl font-bold tracking-widest">
                         {formatPrice(walletBalance)}
                       </span>
                     </div>
