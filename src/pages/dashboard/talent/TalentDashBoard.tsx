@@ -10,7 +10,7 @@ export const TalentDashBoard: React.FC = () => {
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
         <div className="flex items-stretch flex-wrap gap-2 flex-col 2xl:flex-row xl:items-start max-w-xl mx-auto lg:max-w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 flex-1 2xl:self-center w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 flex-1 2xl:self-center w-full">
             <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
               <div className="space-y-3 md:space-y-6 w-full">
                 <h3 className=" capitalize font-semibold text-gray-700">
