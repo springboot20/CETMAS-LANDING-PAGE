@@ -11,10 +11,10 @@ export const TalentDashBoard: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
-        <div className="flex items-center flex-wrap gap-2">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 w-full xl:w-auto flex-1 xl:col-span-4 place-contents-center place-items-center">
+        <div className="flex items-stretch flex-wrap gap-2 flex-col 2xl:flex-row xl:items-start max-w-xl mx-auto lg:max-w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 flex-1 2xl:self-center w-full">
             <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
-              <div className="space-y-3 md:space-y-8 w-full">
+              <div className="space-y-3 md:space-y-6 w-full">
                 <h3 className=" capitalize font-semibold text-gray-700">
                   jobs done
                 </h3>
@@ -27,12 +27,12 @@ export const TalentDashBoard: React.FC = () => {
               </div>
 
               <div className="self-end">
-                <GraphIcon className="h-28" />
+                <GraphIcon className="h-24" />
               </div>
             </Card>
 
             <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
-              <div className="space-y-3 md:space-y-8 w-full">
+              <div className="space-y-3 md:space-y-6 w-full">
                 <h3 className="capitalize font-semibold text-gray-700">
                 pending job request
                 </h3>
@@ -45,12 +45,12 @@ export const TalentDashBoard: React.FC = () => {
               </div>
 
               <div className="self-end">
-                <GraphIcon className="h-28" />
+                <GraphIcon className="h-24" />
               </div>
             </Card>
 
             <Card className="sm:p-5 shadow flex items-center col-span-full sm:col-span-1 bg-white w-full rounded-xl">
-              <div className="space-y-3 md:space-y-8 w-full">
+              <div className="space-y-3 md:space-y-6 w-full">
                 <h3 className=" capitalize font-semibold text-gray-700">
                total job
                 </h3>
@@ -63,7 +63,7 @@ export const TalentDashBoard: React.FC = () => {
               </div>
 
               <div className="self-end">
-                <GraphIcon className="h-28" />
+                <GraphIcon className="h-24" />
               </div>
             </Card>
           </div>
