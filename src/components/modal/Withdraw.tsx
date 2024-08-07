@@ -1,8 +1,4 @@
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-} from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import React from "react";
 import { InputField } from "../forms/TextField/InputField";
 import { Button } from "../button/Button";
