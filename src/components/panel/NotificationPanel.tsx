@@ -12,7 +12,7 @@ export const Notification: React.FC<{
     <div
       id="notification"
       className={classNames(
-        "h-full fixed origin-right z-20 bg-white w-1/2 transition-transform border rounded-xl py-8 px-8 ",
+        "h-full fixed origin-right z-20 bg-white w-full sm:w-[30rem] transition-transform border rounded-xl py-8 px-8 ",
         open
           ? "translate-x-0 right-5 scale-100 top-5 "
           : "translate-x-full right-0 scale-0 top-0",
@@ -32,15 +32,18 @@ export const Notification: React.FC<{
         </h1>
       </header>
 
-      <div className="overflow-y-scroll mt-5 notification-list px-2">
-        <div className="">
-          <div className="rounded-md bg-[#A79BE1B2]/70 p-6">
-            <p className="text-lg font-normal">
-              Lorem ipsum dolor sit amet consectetur. Condimen vitae nisi lectus
-              eu quisque. Mollis bibendum duis sem tristique.
-            </p>
-          </div>
-          <div className="flex justify-between items-center"></div>
+      <div className="overflow-y-scroll mt-5 notification-list px-2 space-y-2">
+        <div className="rounded-md bg-[#A79BE1B2]/70 p-4">
+          <p className="text-lg font-normal">
+            Lorem ipsum dolor sit amet consectetur. Condimen vitae nisi lectus
+            eu quisque. Mollis bibendum duis sem tristique.
+          </p>
+        </div>
+        <div className="rounded-md bg-[#A79BE1B2]/70 p-4">
+          <p className="text-lg font-normal">
+            Lorem ipsum dolor sit amet consectetur. Condimen vitae nisi lectus
+            eu quisque. Mollis bibendum duis sem tristique.
+          </p>
         </div>
       </div>
     </div>

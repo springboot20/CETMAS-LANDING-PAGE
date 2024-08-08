@@ -117,9 +117,9 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
                 className={classNames(
                   "relative appearance-none w-[44px] h-[22px] rounded-[20px] shadow-sm",
                   active
-                    ? "after:left-[calc(100%-22px)] bg-[#4632A8]"
-                    : "after:left-0 bg-[#f3f3f3]",
-                  " after:absolute after:h-[22px] after:w-[22px] after:bg-white after:rounded-full after:top-0 after:scale-[0.7] after:transition",
+                    ? "after:left-[calc(100%-22px)] bg-[#4632A8] after:bg-white"
+                    : "after:left-0 bg-[#f3f3f3] after:bg-transparent border border-[#4632A8] ",
+                  " after:absolute after:h-[22px] after:w-[22px] after:border after:border-[#4632A8] after:rounded-full after:top-1/2 after:-translate-y-1/2 after:scale-[0.7] after:transition",
                 )}
               ></Switch>
             </div>

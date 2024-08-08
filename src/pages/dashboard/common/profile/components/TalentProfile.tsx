@@ -4,7 +4,7 @@ import React from "react";
 
 export const TalentProfile: React.FC = () => {
   return (
-    <form action="" className="">
+    <form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
         <fieldset className="space-y-2">
           <InputField
@@ -137,7 +137,7 @@ export const TalentProfile: React.FC = () => {
         type="button"
         className="bg-[#4632A8] hover:bg-[#4632A8]/70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4632A8]/70 active:bg-[#4632A8] transform hover:-translate-y-0.5 text-white capitalize mt-6 text-base font-normal rounded-lg py-2.5 px-5"
       >
-        updated
+        update
       </Button>
     </form>
   );
