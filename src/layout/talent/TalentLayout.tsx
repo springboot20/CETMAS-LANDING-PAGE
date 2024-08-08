@@ -108,12 +108,14 @@ export const TalentLayout: React.FC = () => {
             {/* Navigation starts */}
 
             {/* Main section starts */}
-            <main className="absolute w-full left-0 lg:w-[calc(100%-8rem)] lg:left-32  min-h-screen right-0">
+            <main className="absolute w-full left-0 lg:w-[calc(100%-8rem)] lg:left-32 min-h-screen right-0">
               <div className="w-full relative flex flex-col justify-between h-full">
                 <header
                   className={classNames(
                     "fixed top-0 right-0 h-20 sm:h-24 left-0 lg:left-32 bg-[#F9F9F9] px-4 sm:px-10 z-20",
-                    scrolling ? "lg:bg-[#F9F9F9] border-b-2" : "lg:bg-transparent",
+                    scrolling
+                      ? "lg:bg-[#F9F9F9] border-b-2"
+                      : "lg:bg-transparent",
                   )}
                 >
                   <div className="flex justify-between items-center h-full">
@@ -152,7 +154,6 @@ export const TalentLayout: React.FC = () => {
                     </div>
                   </div>
                 </header>
-
                 <Outlet />
               </div>
             </main>

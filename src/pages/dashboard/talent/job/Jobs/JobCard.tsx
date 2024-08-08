@@ -25,6 +25,7 @@ export const JobCard: React.FC<JobCardProps> = (props) => {
           <span className="sr-only">favorite icon</span>
           <HeartIcon
             className={classNames(favorite ? "fill-[#4632A8] stroke-none" : "", "h-10")}
+            strokeWidth={1}
           />
         </button>
       </header>

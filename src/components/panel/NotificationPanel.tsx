@@ -14,8 +14,8 @@ export const Notification: React.FC<{
       className={classNames(
         "h-full fixed origin-right z-20 bg-white w-full sm:w-[30rem] transition-transform border rounded-xl py-8 px-8 ",
         open
-          ? "translate-x-0 right-5 scale-100 top-5 "
-          : "translate-x-full right-0 scale-0 top-0",
+          ? "translate-x-0 right-5 top-5 "
+          : "translate-x-full right-0 top-0",
       )}
     >
       <button
@@ -23,7 +23,7 @@ export const Notification: React.FC<{
         className="absolute top-5 right-5 cursor-pointer"
       >
         <span className="sr-only">Close Notification</span>
-        <XMarkIcon className="h-7 text-gray-800" strokeWidth={3} />
+        <XMarkIcon className="h-7 text-gray-800" />
       </button>
 
       <header className="p-2 border-b-2 border-b-gray-900/30">
