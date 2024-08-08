@@ -9,7 +9,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         <label
           htmlFor={htmlFor}
           className={classNames(
-            'text-sm font-semibold text-gray-700 sm:text-base block capitalize',
+            'text-sm font-semibold text-gray-700 sm:text-base block',
             labelClass
           )}>
           {label}

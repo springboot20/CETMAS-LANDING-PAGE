@@ -101,7 +101,7 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
             </div>
           </div>
 
-          <Card className="flex items-center justify-between bg-[#A79BE1B2]/20 rounded-xl px-10">
+          <Card className="flex items-center justify-between bg-[#A79BE1B2]/20 rounded-xl px-10 py-8">
             <div>
               <h1 className="text-lg lg:text-xl font-bold capitalize text-gray-800">
                 availability
@@ -124,7 +124,7 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
               ></Switch>
             </div>
           </Card>
-          <Card className="flex items-center justify-between bg-[#A79BE1B2]/20 rounded-xl px-10">
+          <Card className="flex items-center justify-between bg-[#A79BE1B2]/20 rounded-xl px-10 py-8">
             <p className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 capitalize">
               jobs done
             </p>
