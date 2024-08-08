@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { DisclosureButton } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "@/assets/cetmas-logo.png";
 import mobileLogo from "@/assets/logo.png";
@@ -21,9 +21,7 @@ import { Routes } from "@/types/navigation";
 export const DashBoardNavigation: React.FC<{
   open: boolean;
   routes: Routes;
-  close: (
-    focusableElement?: HTMLElement | React.MutableRefObject<HTMLElement | null>,
-  ) => void;
+  close: () => void;
 }> = ({ open, close, routes }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const { pathname } = useLocation();
@@ -109,8 +107,7 @@ export const DashBoardNavigation: React.FC<{
 
         {/* Mobile navigation starts */}
         <AnimatePresence initial={false} mode="wait">
-          <DisclosurePanel
-            as={motion.div}
+          <motion.div
             {...framerSidebarPanel}
             className={classNames(
               "lg:hidden fixed top-0 h-screen w-full sm:w-[25rem] bg-black",
@@ -119,10 +116,13 @@ export const DashBoardNavigation: React.FC<{
             )}
           >
             <div className="h-full flex flex-col justify-between p-4">
-              <DisclosureButton className="absolute right-8 top-8">
+              <button
+                onClick={() => close()}
+                className="absolute right-8 top-8"
+              >
                 <span className="sr-only">Close Side menu</span>
                 <XMarkIcon className="h-8 w-8 text-gray-100" />
-              </DisclosureButton>
+              </button>
 
               <div className="flex flex-col gap-5">
                 {/* logo container starts */}
@@ -196,7 +196,7 @@ export const DashBoardNavigation: React.FC<{
                 </NavItem>
               </div>
             </div>
-          </DisclosurePanel>
+          </motion.div>
         </AnimatePresence>
         {/* Mobile navigation ends */}
       </>
