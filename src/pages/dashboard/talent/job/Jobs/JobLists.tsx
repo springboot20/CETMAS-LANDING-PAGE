@@ -4,7 +4,7 @@ import { JobCard } from "./JobCard";
 
 export const JobLists: React.FC = () => {
   return (
-    <div className="col-span-2 w-full flex flex-col gap-6 px-2 h-screen job-list">
+    <div className="col-span-2 w-full flex flex-col gap-6 px-2 h-screen job-list mt-9">
       {data.map((c) => (
         <JobCard key={c.id} {...c} />
       ))}
