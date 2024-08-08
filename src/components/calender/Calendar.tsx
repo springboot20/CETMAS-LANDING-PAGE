@@ -13,7 +13,6 @@ export const Calendar: React.FC = () => {
     daysOfWeeks,
     selectedDay,
     setSelectedDay,
-    today,
   } = useCalendar();
 
   return (
@@ -66,20 +65,22 @@ export const Calendar: React.FC = () => {
               }}
               className={classNames(
                 isEqual(day, selectedDay) && "text-white",
-                !isEqual(day, selectedDay) && "hover:bg-white",
-                !isEqual(day, selectedDay) && isToday(day) && "text-gray-900",
+                !isEqual(day, selectedDay) && "hover:bg-gray-200",
+                !isEqual(day, selectedDay) && isToday(day) && "text-gray-500",
                 !isEqual(day, selectedDay) &&
                   !isToday(day) &&
-                  isSameMonth(day, today) &&
-                  "text-gray-700",
+                  isSameMonth(day, firstDayCurrentMonth) &&
+                  "text-gray-600",
                 !isEqual(day, selectedDay) &&
                   !isToday(day) &&
-                  !isSameMonth(day, today) &&
+                  !isSameMonth(day, firstDayCurrentMonth) &&
                   "text-gray-400",
                 isEqual(day, selectedDay) && !isToday(day) && "bg-gray-400",
-                isToday(day) && "bg-[#4632A8] text-white",
-                isEqual(day, selectedDay) && isToday(day) && "font-semibold ",
-                "h-6 w-6 mx-auto flex transition text-sm items-center justify-center rounded-full cursor-pointer",
+                isEqual(day, selectedDay) &&
+                  isToday(day) &&
+                  "bg-[#4632A8] text-white",
+                (!isEqual(day, selectedDay) || isToday(day)) && "font-semibold",
+                "h-7 w-7 mx-auto flex transition text-sm items-center justify-center rounded-full cursor-pointer",
               )}
             >
               <time dateTime={format(day, "yyyy-MMM-d")}>

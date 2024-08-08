@@ -42,7 +42,6 @@ export const CalenderProvider: React.FC<{ children: React.ReactNode }> = ({
   return (
     <CalenderContext.Provider
       value={{
-        today,
         firstDayCurrentMonth,
         daysOfWeeks,
         setSelectedDay,
