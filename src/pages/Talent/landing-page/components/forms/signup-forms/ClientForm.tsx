@@ -27,6 +27,8 @@ export const ClientForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+navigate("/login") 
   };
 
   const steps: JSX.Element[] = [
