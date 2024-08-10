@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { DisclosureButton } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "@/assets/cetmas-logo.png";
 import mobileLogo from "@/assets/logo.png";
