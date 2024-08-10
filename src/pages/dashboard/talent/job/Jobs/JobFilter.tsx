@@ -8,7 +8,7 @@ import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
 export const JobFilter: React.FC = () => {
   return (
     <div className="col-span-1 mt-4 sm:mt-0 flex-shrink-0">
-      <div className="lg:hidden fixed top-28 right-0 left-0">
+      <div className="lg:hidden fixed top-32 right-0 left-0">
         <DisclosureButton className="bg-gray-200 rounded-md py-2 px-3 flex items-center gap-2 absolute right-6">
           <AdjustmentsHorizontalIcon className="h-8" />
           <span className="capitalize text-base">filter jobs</span>
