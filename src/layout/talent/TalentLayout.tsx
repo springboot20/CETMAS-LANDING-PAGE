@@ -20,8 +20,6 @@ export const TalentLayout: React.FC = () => {
   const { pathname } = useLocation();
   const title = pathname.split("/")[2];
 
-  console.log(title);
-
   const [openNotification, setOpenNotification] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
   const searchInputRef = useRef<HTMLInputElement>(null);

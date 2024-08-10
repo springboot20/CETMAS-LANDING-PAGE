@@ -6,8 +6,6 @@ export const Notification: React.FC<{
   open: boolean;
   setOpenNotification: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ open, setOpenNotification }) => {
-  console.log(open);
-
   return (
     <div
       id="notification"
