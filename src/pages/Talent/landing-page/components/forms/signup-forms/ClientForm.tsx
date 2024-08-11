@@ -4,32 +4,35 @@ import ClientImage from "@/assets/client.png";
 import { AnimatePresence, motion } from "framer-motion";
 import { InputField } from "@/components/forms/TextField/InputField";
 import { Link, useNavigate } from "react-router-dom";
+import { FormikHelpers, useFormik } from "formik";
+import { ChangeEvent, ClientFormInitialValues } from "@/util/formik";
+
+const initialValues: ClientFormInitialValues = {
+  "full-name": "",
+  email: "",
+  password: "",
+  gender: "",
+  "phone-number": "",
+  website: "",
+};
 
 export const ClientForm: React.FC = () => {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const navigate = useNavigate();
-  const [values, setValues] = useState({
-    "full-name": "",
-    email: "",
-    password: "",
-    gender: "",
-    "phone-number": "",
-    website: "",
+
+  async function onSubmit(
+    values: ClientFormInitialValues,
+    { resetForm }: FormikHelpers<ClientFormInitialValues>,
+  ) {
+    console.log(values);
+    await Promise.resolve(setTimeout(() => navigate("/login"), 5000));
+    resetForm();
+  }
+
+  const { handleSubmit, handleChange, values } = useFormik({
+    initialValues,
+    onSubmit,
   });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
-  ) => {
-    setValues((prev) => {
-      return { ...prev, [e.target.id]: e.target.value };
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-navigate("/login") 
-  };
 
   const steps: JSX.Element[] = [
     <SocialForm key={"social"} handleChange={handleChange} values={values} />,
@@ -85,7 +88,7 @@ navigate("/login")
 
             {currentStep < steps.length - 1 ? (
               <button
-                type="submit"
+                type="button"
                 onClick={handleNextStep}
                 className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transform hover:-translate-y-1.5 transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4632A8]/70 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto lg:w-1/3 xl:mt-12"
               >
@@ -107,7 +110,7 @@ navigate("/login")
 };
 
 const SocialForm: React.FC<{
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: ChangeEvent
   values: {
     [key: string]: string;
   };
@@ -158,9 +161,7 @@ const SocialForm: React.FC<{
 );
 
 const ContactForm: React.FC<{
-  handleChange: (
-    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>,
-  ) => void;
+  handleChange: ChangeEvent
   values: {
     [key: string]: string;
   };
@@ -195,7 +196,6 @@ const ContactForm: React.FC<{
         className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-sm sm:leading-6 focus:outline-none"
       />
     </fieldset>
-
     <fieldset className="space-y-2">
       <InputField
         htmlFor="website"
