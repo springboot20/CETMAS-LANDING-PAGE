@@ -30,12 +30,12 @@ export const DashBoardNavigation: React.FC<{
       <>
         <div
           className={classNames(
-            `hidden lg:flex fixed left-0 top-0 h-screen lg:bg-[#F9F9F9] w-32 flex-col items-center before:right-0 before:top-0 before:h-full before:w-1 before:bg-gray-200 before:absolute`,
+            `hidden lg:flex fixed left-0 top-0 h-screen lg:bg-[#F9F9F9] w-32 flex-col items-center`,
           )}
         >
           <div
             className={classNames(
-              "hidden lg:flex flex-col items-center h-full w-full",
+              "hidden lg:flex flex-col items-center h-full w-full overflow-y-scroll xl:overflow-y-auto scroll before:right-0 before:top-0 before:h-full before:w-1 xl:before:bg-gray-200 before:absolute",
               !pathname.includes("/admin") ? "justify-between" : "gap-10",
             )}
           >
@@ -114,7 +114,7 @@ export const DashBoardNavigation: React.FC<{
               "transform transition-transform duration-200 ",
             )}
           >
-            <div className="h-full flex flex-col justify-between p-4">
+            <div className="h-full flex flex-col justify-between p-4 overflow-y-scroll scroll">
               <button
                 onClick={() => close()}
                 className="absolute right-8 top-8"
