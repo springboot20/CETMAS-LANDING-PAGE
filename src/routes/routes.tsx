@@ -24,6 +24,7 @@ import { Profile } from "@/pages/dashboard/common/profile/Profile";
 import { AdminProfile } from "@/pages/dashboard/common/profile/components/AdminProfile";
 import { ClientProfile } from "@/pages/dashboard/common/profile/components/ClientProfile";
 import { Applicants } from "@/pages/dashboard/common/applicants/Applicants";
+import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/Login copy";
 
 export const routes = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ export const routes = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "/admin-login",
+        element: <AdminLogin />,
       },
       {
         path: "register",
@@ -62,9 +67,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "about-talents",
-        element: (
-            <AboutTalent />
-        ),
+        element: <AboutTalent />,
       },
     ],
   },
@@ -152,10 +155,6 @@ export const routes = createBrowserRouter([
           </Profile>
         ),
       },
-      {
-        path: "*",
-        element: <NotFound />,
-      },
     ],
   },
   {
@@ -187,5 +186,9 @@ export const routes = createBrowserRouter([
         element: <Applicants />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
