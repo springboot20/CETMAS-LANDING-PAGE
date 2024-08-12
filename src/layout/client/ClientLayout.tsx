@@ -98,20 +98,14 @@ export const ClientLayout: React.FC = () => {
     },
   ];
 
+  console.log(pathname.includes("/jobs"));
   return (
     <Disclosure as="div">
       <>
-        <Notification
-          open={openNotification}
-          setOpenNotification={setOpenNotification}
-        />
+        <Notification open={openNotification} setOpenNotification={setOpenNotification} />
         <div className="relative z-10 w-full flex lg:justify-between items-stretch h-screen flex-shrink-0">
           {/* Navigation starts */}
-          <DashBoardNavigation
-            open={open}
-            close={handleClose}
-            routes={routes}
-          />
+          <DashBoardNavigation open={open} close={handleClose} routes={routes} />
           {/* Navigation starts */}
 
           {/* Main section starts */}
@@ -142,14 +136,13 @@ export const ClientLayout: React.FC = () => {
                     </div>
                   </div>
 
-                  {pathname.includes("/jobs") ||
-                    (pathname.includes("/applicants") && (
-                      <div className="hidden lg:flex items-center space-x-3">
-                        <div className="hidden lg:block">
-                          <SearchField ref={searchInputRef} />
-                        </div>
+                  {pathname.includes("/jobs") || pathname.includes("/applicants") ? (
+                    <div className="hidden lg:flex items-center space-x-3">
+                      <div className="hidden lg:block">
+                        <SearchField ref={searchInputRef} />
                       </div>
-                    ))}
+                    </div>
+                  ) : null}
 
                   <div className="flex items-center space-x-4 sm:space-x-8">
                     <button
@@ -166,10 +159,7 @@ export const ClientLayout: React.FC = () => {
                         className="inline-flex items-center justify-center rounded-md text-gray-900"
                       >
                         <span className="sr-only">Open Menu</span>
-                        <Bars3Icon
-                          className="block h-8 w-8 sm:h-10 sm:w-10"
-                          aria-hidden="true"
-                        />
+                        <Bars3Icon className="block h-8 w-8 sm:h-10 sm:w-10" aria-hidden="true" />
                       </button>
                     </div>
                   </div>
