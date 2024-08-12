@@ -1,6 +1,7 @@
 import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export const PendingJobs = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -39,6 +40,9 @@ export const PendingJobs = () => {
 };
 
 const Card = () => {
+
+  const navigate = useNavigate()
+
   return (
     <div className="bg-white flex flex-col p-8 flex-grow w-[26rem] flex-shrink-0 rounded-xl">
       <header className="flex items-start justify-between">
@@ -56,7 +60,7 @@ const Card = () => {
         from....
       </p>
       <div className="mx-auto flex items-center justify-center w-full mt-3">
-        <button className="capitalize text-base sm:text-lg lg:text-xl font-bold px-9 py-3 text-[#4632A8] border-[#4632A8] border rounded-xl">
+        <button type="button" onClick={()=> navigate("/client/applicants")} className="capitalize text-base sm:text-lg lg:text-xl font-bold px-9 py-3 text-[#4632A8] border-[#4632A8] border rounded-xl">
           view applicants
         </button>
       </div>

@@ -107,7 +107,7 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
                 availability
               </h1>
               <span className="inline-block text-xs sm:text-sm font-normal text-gray-700 capitalize">
-                available to work
+                {active ? "available to work" : "unavailable to work"}
               </span>
             </div>
             <div>

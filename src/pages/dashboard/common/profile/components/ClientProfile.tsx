@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const ClientProfile: React.FC = () => {
+  const navigate= useNavigate()
+
   return (
     <div className="bg-[#A79BE1]/20 rounded-2xl px-4 lg:px-8 py-7">
       <div className="max-w-2xl mx-auto grid gap-2 grid-cols-1 lg:grid-cols-2 lg:gap-6">
@@ -96,7 +99,7 @@ export const ClientProfile: React.FC = () => {
         </div>
 
         <div className="col-span-full flex justify-center items-center">
-          <button className="text-base capitalize px-7 py-2 font-normal transition text-white bg-[#4632A8] hover:bg-[#4632A8]/80 active:bg-[#4632A8]/80 rounded-lg">
+          <button type="button" onClick={()=> navigate("/client/messages")} className="text-base capitalize px-7 py-2 font-normal transition text-white bg-[#4632A8] hover:bg-[#4632A8]/80 active:bg-[#4632A8]/80 rounded-lg">
             accept
           </button>
         </div>
