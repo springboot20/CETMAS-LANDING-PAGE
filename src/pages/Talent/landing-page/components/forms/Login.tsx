@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CETMASLOGO from "@/assets/cetmas-logo.png";
 import LoginImage from "@/assets/login-image.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@headlessui/react";
 import { SignUp } from "./SignUp.tsx";
 import { InputField } from "@/components/forms/TextField/InputField";
@@ -21,10 +21,12 @@ export const Login: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues,
-    onSubmit(values, formikHelpers) {},
+    onSubmit(values) {
+      console.log(values)
+    },
   });
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleClose = () => {
     setIsOpen(false);
