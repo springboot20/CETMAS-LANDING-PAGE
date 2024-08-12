@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import CETMASLOGO from "@/assets/cetmas-logo.png";
 import LoginImage from "@/assets/login-image.png";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { Button } from "@headlessui/react";
 import { SignUp } from "./SignUp.tsx";
 import { InputField } from "@/components/forms/TextField/InputField";
 import { useFormik } from "formik";
+import { LocalStorage } from "@/util/index.ts";
+import { useAppDispatch } from "@/hooks/hooks.ts";
+import { setUserRole } from "@/features/auth/auth.slice.ts";
 
 type InitialValues = {
   email: string;
@@ -17,12 +20,32 @@ const initialValues: InitialValues = {
   password: "",
 };
 
+const mockLoginData = (credential: { email: string }) => {
+  if (credential.email === "talent@gmail.com") {
+    return { token: "mock_token", user: { role: "talent" } };
+  } else if (credential.email === "client@gmail.com") {
+    return { token: "mock_token", user: { role: "client" } };
+  }
+};
+
 export const Login: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues,
     onSubmit(values) {
-      console.log(values)
+      const response = mockLoginData({ email: values.email });
+
+      LocalStorage.set("token", response?.token);
+      dispatch(setUserRole(response?.user.role));
+
+      if (response?.user.role === "talent") {
+        navigate("/talent/dashboard");
+      } else if (response?.user.role === "client") {
+        navigate("/client/dashboard");
+      }
     },
   });
 
