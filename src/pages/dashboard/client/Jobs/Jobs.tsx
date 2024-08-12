@@ -34,8 +34,14 @@ export const ClientJobs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 sm:gap-8">
           <div className="md:col-span-2">
             <header className="flex items-center justify-between">
-              <h1 className="text-[#4632A8] text-xl lg:text-4xl font-bold capitalize">
-                lists of posted jobs
+              <h1 className="text-[#4632A8] text-xl lg:text-4xl font-bold">
+                Lists of{" "}
+                {jobStatus === "posted"
+                  ? "Posted"
+                  : jobStatus === "pending"
+                  ? "Pending"
+                  : "Completed"}{" "}
+                Jobs
               </h1>
               <div className="md:hidden">
                 <Menu as="div" className="relative">
