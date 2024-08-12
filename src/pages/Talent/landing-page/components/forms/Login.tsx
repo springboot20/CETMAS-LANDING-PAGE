@@ -5,29 +5,26 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@headlessui/react";
 import { SignUp } from "./SignUp.tsx";
 import { InputField } from "@/components/forms/TextField/InputField";
+import { useFormik } from "formik";
+
+type InitialValues = {
+  email: string;
+  password: string;
+};
+
+const initialValues: InitialValues = {
+  email: "",
+  password: "",
+};
 
 export const Login: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
+  const { values, handleChange, handleSubmit } = useFormik({
+    initialValues,
+    onSubmit(values, formikHelpers) {},
   });
 
   const navigate = useNavigate();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValues((prev) => {
-      return { ...prev, [e.target.id]: e.target.value };
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (values.email.length > 0 && values.password.length > 0) {
-      await Promise.resolve(setTimeout(() => navigate("/talent/dashboard"), 2000));
-    }
-  };
 
   const handleClose = () => {
     setIsOpen(false);

@@ -16,7 +16,7 @@ export const Calendar: React.FC = () => {
   } = useCalendar();
 
   return (
-    <div className="rounded-xl bg-[#A79BE1B2]/20 p-4 w-full xl:max-w-sm">
+    <div className="rounded-xl bg-[#A79BE1B2]/20 p-4 w-full max-w-lg xl:max-w-sm">
       <div className="flex items-center justify-between">
         <h2 className="flex-auto font-semibold text-gray-900 text-lg capitalize">
           {format(firstDayCurrentMonth, "MMM yyyy")}
