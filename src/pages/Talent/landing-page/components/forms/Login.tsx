@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CETMASLOGO from "@/assets/cetmas-logo.png";
 import LoginImage from "@/assets/login-image.png";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@headlessui/react";
 import { SignUp } from "./SignUp.tsx";
 import { InputField } from "@/components/forms/TextField/InputField";
