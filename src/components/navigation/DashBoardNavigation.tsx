@@ -63,13 +63,9 @@ export const DashBoardNavigation: React.FC<{
                     {({ isActive }) => (
                       <>
                         <Icon
-                          className={classNames(
-                            isActive ? "fill-gray-800" : "fill-gray-900",
-                          )}
+                          className={classNames(isActive ? "fill-gray-800" : "fill-gray-900")}
                         />
-                        <span className="text-lg font-normal capitalize">
-                          {label}
-                        </span>
+                        <span className="text-lg font-normal capitalize">{label}</span>
                       </>
                     )}
                   </NavItem>
@@ -89,13 +85,9 @@ export const DashBoardNavigation: React.FC<{
                   {({ isActive }) => (
                     <>
                       <SignOutIcon
-                        className={classNames(
-                          isActive ? "fill-gray-800" : "fill-gray-900",
-                        )}
+                        className={classNames(isActive ? "fill-gray-800" : "fill-gray-900")}
                       />
-                      <span className="text-lg font-normal capitalize">
-                        logout
-                      </span>
+                      <span className="text-lg font-normal capitalize">logout</span>
                     </>
                   )}
                 </NavItem>
@@ -115,10 +107,7 @@ export const DashBoardNavigation: React.FC<{
             )}
           >
             <div className="h-full flex flex-col justify-between p-4 overflow-y-scroll scroll">
-              <button
-                onClick={() => close()}
-                className="absolute right-8 top-8"
-              >
+              <button onClick={() => close()} className="absolute right-8 top-8">
                 <span className="sr-only">Close Side menu</span>
                 <XMarkIcon className="h-8 w-8 text-gray-100" />
               </button>
@@ -155,9 +144,7 @@ export const DashBoardNavigation: React.FC<{
                           <>
                             <motion.div {...framerIcon(open)}>
                               <Icon
-                                className={classNames(
-                                  isActive ? "fill-white" : "fill-gray-100",
-                                )}
+                                className={classNames(isActive ? "fill-white" : "fill-gray-100")}
                               />
                             </motion.div>
                             <motion.span
@@ -174,26 +161,21 @@ export const DashBoardNavigation: React.FC<{
                 </motion.ul>
               </div>
 
-              <div className="">
-                {/* SignOut icon */}
-                <NavItem
-                  to="/"
-                  className="flex-row space-x-3 rounded-lg py-2.5 px-3"
-                >
-                  {({ isActive }) => (
-                    <>
-                      <SignOutIcon
-                        className={classNames(
-                          isActive ? "fill-white" : "fill-gray-100",
-                        )}
-                      />
-                      <span className="text-white text-lg font-normal capitalize">
-                        logout{" "}
-                      </span>
-                    </>
-                  )}
-                </NavItem>
-              </div>
+              {!pathname.includes("/admin") && (
+                <div className="">
+                  {/* SignOut icon */}
+                  <NavItem to="/" className="flex-row space-x-3 rounded-lg py-2.5 px-3">
+                    {({ isActive }) => (
+                      <>
+                        <SignOutIcon
+                          className={classNames(isActive ? "fill-white" : "fill-gray-100")}
+                        />
+                        <span className="text-white text-lg font-normal capitalize">logout </span>
+                      </>
+                    )}
+                  </NavItem>
+                </div>
+              )}
             </div>
           </motion.div>
         </AnimatePresence>

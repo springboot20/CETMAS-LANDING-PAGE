@@ -19,7 +19,7 @@ import { Notification } from "@/components/panel/NotificationPanel";
 export const AdminLayout: React.FC = () => {
   const [scrolling, setScrolling] = useState<boolean>(false);
   const { pathname } = useLocation();
-  const title = pathname.split("/")[1];
+  const title = pathname.split("/")[2];
 
   const [openNotification, setOpenNotification] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
@@ -41,6 +41,8 @@ export const AdminLayout: React.FC = () => {
       setScrolling(false);
     }
   };
+
+  console.log(title)
 
   let displayText: string | undefined;
 
@@ -119,7 +121,7 @@ export const AdminLayout: React.FC = () => {
             <div className="w-full relative flex flex-col justify-between h-full">
               <header
                 className={classNames(
-                  "fixed top-0 right-0 h-20 sm:h-24left-0 lg:left-36 bg-[#F9F9F9] px-10 z-20",
+                  "fixed top-0 right-0 h-20 sm:h-24 left-0 lg:left-36 bg-[#F9F9F9] px-10 z-20",
                   scrolling ? "lg:bg-[#F9F9F9]" : "g:bg-transparent",
                 )}
               >
