@@ -1,7 +1,7 @@
 import { TalentLayout } from "@/layout/talent/TalentLayout";
 import { LandingLayout } from "@/layout/LandingLayout";
 import { ClientDashBoard } from "@/pages/dashboard/client/ClientDashBoard";
-import { Messages } from "@/pages/dashboard/common/messages/Messages";
+import { Messages } from "@/pages/dashboard/common/messages/TalentMessages";
 import { TalentProfile } from "@/pages/dashboard/common/profile/components/TalentProfile";
 import { Wallet } from "@/pages/dashboard/common/wallet/Wallet";
 import { Jobs } from "@/pages/dashboard/talent/job/Jobs";
@@ -25,6 +25,8 @@ import { AdminProfile } from "@/pages/dashboard/common/profile/components/AdminP
 import { ClientProfile } from "@/pages/dashboard/common/profile/components/ClientProfile";
 import { Applicants } from "@/pages/dashboard/common/applicants/Applicants";
 import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/Login copy";
+import { AdminMessages } from "@/pages/dashboard/common/messages/AdminMesages";
+import { ClientMessages } from "@/pages/dashboard/common/messages/ClientMessages";
 
 export const routes = createBrowserRouter([
   {
@@ -141,7 +143,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "messages",
-        element: <Messages />,
+        element: <ClientMessages />,
       },
       {
         path: "wallet",
@@ -167,7 +169,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "messages",
-        element: <Messages />,
+        element: <AdminMessages />,
       },
       {
         path: "wallet",
