@@ -6,7 +6,13 @@ import { JobCardProps } from "@/types/jobs";
 import { classNames } from "@/util";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
-export const JobCard: React.FC<JobCardProps> = (props) => {
+export const JobCard: React.FC<
+  JobCardProps & {
+    status?: string;
+    setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+    setStatus?: React.Dispatch<React.SetStateAction<string>>;
+  }
+> = (props) => {
   const [favorite, setFavorite] = useState<boolean>(false);
 
   return (

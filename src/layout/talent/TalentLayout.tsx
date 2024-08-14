@@ -100,17 +100,10 @@ export const TalentLayout: React.FC = () => {
   return (
     <Disclosure as="div">
       <>
-        <Notification
-          open={openNotification}
-          setOpenNotification={setOpenNotification}
-        />
+        <Notification open={openNotification} setOpenNotification={setOpenNotification} />
         <div className="relative z-10 w-full flex lg:justify-between items-stretch h-screen flex-shrink-0">
           {/* Navigation starts */}
-          <DashBoardNavigation
-            open={open}
-            close={handleClose}
-            routes={routes}
-          />
+          <DashBoardNavigation open={open} close={handleClose} routes={routes} />
           {/* Navigation starts */}
 
           {/* Main section starts */}
@@ -119,9 +112,7 @@ export const TalentLayout: React.FC = () => {
               <header
                 className={classNames(
                   "fixed top-0 right-0 h-20 sm:h-24 left-0 lg:left-32 bg-[#F9F9F9] px-4 sm:px-10 z-20",
-                  scrolling
-                    ? "lg:bg-[#F9F9F9] border-b-2"
-                    : "lg:bg-transparent",
+                  scrolling ? "lg:bg-[#F9F9F9] border-b-2" : "lg:bg-transparent",
                 )}
               >
                 <div className="flex justify-between items-center h-full">
@@ -131,7 +122,7 @@ export const TalentLayout: React.FC = () => {
                     </h3>
                   </div>
 
-                  {pathname.includes("/jobs") && (
+                  {pathname.includes("/jobs") && !pathname.includes("/jobs/:id") && (
                     <div className="hidden lg:flex items-center space-x-3">
                       <div className="hidden lg:block">
                         <SearchField ref={searchInputRef} />
@@ -154,10 +145,7 @@ export const TalentLayout: React.FC = () => {
                         className="inline-flex items-center justify-center rounded-md text-gray-900"
                       >
                         <span className="sr-only">Open Menu</span>
-                        <Bars3Icon
-                          className="block w-8 h-8 sm:h-10 sm:w-10"
-                          aria-hidden="true"
-                        />
+                        <Bars3Icon className="block w-8 h-8 sm:h-10 sm:w-10" aria-hidden="true" />
                       </button>
                     </div>
                   </div>

@@ -7,8 +7,4 @@ export type JobCardProps = {
   type: string;
   duration: number;
   description: string;
-} & {
-  status: string;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  setStatus: React.Dispatch<React.SetStateAction<string>>;
 };
