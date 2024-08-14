@@ -54,7 +54,7 @@ export const AdminLayout: React.FC = () => {
       displayText = "list of jobs";
       break;
     case "messages":
-      displayText = "chat with admin";
+      displayText = "";
       break;
     case "wallet":
       displayText = "wallet";

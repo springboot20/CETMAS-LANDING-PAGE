@@ -57,7 +57,7 @@ export const DashBoardNavigation: React.FC<{
                     activeClass='before:content-[" "] before:absolute before:h-full before:bg-[#4632A8] before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all'
                     className={classNames(
                       current ? "hover:bg-gray-200 " : "",
-                      'flex-col py-6 px-7 w-full transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all relative',
+                      'flex-col py-6 w-full transition before:content-[" "] before:absolute before:h-full before:top-0 before:w-1 before:right-0 before:z-10 before:transition-all relative',
                     )}
                   >
                     {({ isActive }) => (
