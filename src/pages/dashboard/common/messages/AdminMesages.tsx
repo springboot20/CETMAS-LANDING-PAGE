@@ -224,6 +224,287 @@ export const AdminMessages: React.FC = () => {
                     <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
                   </div>
                 </div>
+                
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+                <div
+                  role="button"
+                  className="flex items-stretch justify-between hover:rounded-lg p-4 border-b hover:bg-gray-100"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="h-14 w-14 rounded-full bg-gray-300 border"></span>
+                    <p className="flex flex-col -space-y-1">
+                      <span className="text-base sm:text-lg font-bold capitalize">
+                        smith johnson
+                      </span>
+                      <span className="text-base font-medium">Lorem ipsum dolor sit amet</span>
+                    </p>
+                  </div>
+                  <div className="self-end">
+                    <span className="text-base font-medium text-[#4632A8]">10:15pm</span>
+                  </div>
+                </div>
+
                 <div
                   role="button"
                   className="flex items-stretch justify-between hover:rounded-lg p-4 hover:bg-gray-100"
@@ -247,104 +528,232 @@ export const AdminMessages: React.FC = () => {
         </div>
 
         <div className="relative left-0 lg:left-[26rem] flex-1 lg:flex-none lg:w-[calc(100%-26rem)] xl:left-[30rem] xl:w-[calc(100%-30rem)]">
-          <Card className="lg:ml-2 bg-[#A79BE1B2]/30 w-full h-screen rounded-xl lg:h-auto lg:rounded-2xl flex flex-col flex-grow mx-auto bg-white overflow-auto overflow-y-auto">
-            <div className="flex flex-col flex-grow p-4 overflow-y-auto h-full gap-10">
-              <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
-                <div className="flex flex-col items-center text-center gap-1">
-                  <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
-                  <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
-                    admin
-                  </span>
+          <Card className="lg:ml-2 bg-[#A79BE1B2]/30 w-full h-screen rounded-xl lg:h-auto lg:rounded-2xl flex flex-col mx-auto bg-white">
+            <div className="flex flex-col flex-grow p-4 gap-10">
+              <div className="flex flex-col flex-grow overflow-y-auto h-full gap-10">
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
-                  <p className="text-base sm:text-lg font-medium text-gray-900">
-                    Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
-                    leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
-                    lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
-                    egestas libero.
-                  </p>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
                 </div>
+
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
+                </div>
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
+                </div>
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
+                </div>
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
+                </div>
+                <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      admin
+                    </span>
+                  </div>
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
+                      lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
+                      egestas libero.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
+                  <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
+                    <p className="text-base sm:text-lg font-medium text-gray-900">
+                      Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
+                      le
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center text-center gap-1">
+                    <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
+                    <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
+                      you
+                    </span>
+                  </div>
+                </div>
+
               </div>
 
-              <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
-                <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
-                  <p className="text-base sm:text-lg font-medium text-gray-900">
-                    Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec le
-                  </p>
-                </div>
-                <div className="flex flex-col items-center text-center gap-1">
-                  <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
-                  <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
-                    you
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
-                <div className="flex flex-col items-center text-center gap-1">
-                  <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
-                  <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
-                    admin
-                  </span>
-                </div>
-                <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
-                  <p className="text-base sm:text-lg font-medium text-gray-900">
-                    Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
-                    leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
-                    lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
-                    egestas libero.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
-                <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
-                  <p className="text-base sm:text-lg font-medium text-gray-900">
-                    Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec le
-                  </p>
-                </div>
-                <div className="flex flex-col items-center text-center gap-1">
-                  <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
-                  <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
-                    you
-                  </span>
-                </div>
-              </div>
-              <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
-                <div className="flex flex-col items-center text-center gap-1">
-                  <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
-                  <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
-                    admin
-                  </span>
-                </div>
-                <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
-                  <p className="text-base sm:text-lg font-medium text-gray-900">
-                    Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec
-                    leo. Interdum eu massa amet tellus enim. Pellentesque rutrum lacus sit sit
-                    lacinia quam imperdiet feugiat. Velit est rutrum tincidunt nisi amet egestas
-                    egestas libero.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex mt-2 gap-2 max-w-xl lg:max-w-4xl ml-auto justify-end w-full">
-                <div className="bg-[#A79BE1B2] w-full rounded-2xl p-4 lg:py-8 lg:px-12">
-                  <p className="text-base sm:text-lg font-medium text-gray-900">
-                    Lorem ipsum dolor sit amet consectetur. Erat nisl egestas mauris euismod nec le
-                  </p>
-                </div>
-                <div className="flex flex-col items-center text-center gap-1">
-                  <div className="h-20 w-20 rounded-full bg-white border flex-shrink-0"></div>
-                  <span className="capitalize text-base font-semibold sm:text-lg text-gray-900">
-                    you
-                  </span>
-                </div>
-              </div>
-              
-            </div>
-
-            <div className="sticky mt-20 mx-auto bottom-11">
-              <fieldset className="overflow-hidden bg-[#ACB4F470] flex items-center border-2 border-[#4632A8] rounded-lg h-14 w-full gap-2">
+              <div className="flex-none sticky bottom-0 bg-[#ACB4F470] border-2 border-[#4632A8] rounded-lg h-14 w-1/2 mx-auto gap-2 flex items-center">
                 <button type="button" className="px-5">
                   <span className="sr-only">Emoji button</span>
                   <EmojiIcon />
@@ -364,7 +773,7 @@ export const AdminMessages: React.FC = () => {
                   <span className="sr-only">send button</span>
                   <PaperAirplaneIcon className="text-white h-6" />
                 </button>
-              </fieldset>
+              </div>
             </div>
           </Card>
         </div>
