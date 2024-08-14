@@ -90,14 +90,14 @@ export const ClientForm: React.FC = () => {
               <button
                 type="button"
                 onClick={handleNextStep}
-                className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transform hover:-translate-y-1.5 transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4632A8]/70 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto lg:w-1/3 xl:mt-12"
+                className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto lg:w-1/3 xl:mt-12"
               >
                 Next
               </button>
             ) : (
               <button
                 type="submit"
-                className="block py-3 w-full mt-8 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transform hover:-translate-y-1.5 transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4632A8]/70 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto xl:py-3.5 lg:text-lg lg:w-2/3 xl:mt-12"
+                className="block py-3 w-full mt-8 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto xl:py-3.5 lg:text-lg lg:w-2/3 xl:mt-12"
               >
                 Sign Up
               </button>

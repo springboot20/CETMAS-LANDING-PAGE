@@ -8,19 +8,23 @@ export type ClientFormInitialValues = {
 };
 
 export type TalentFormInitialValues = {
-  "full-name": string;
+  "last-name": string;
+  "first-name": string;
+  gender: string;
   email: string;
   password: string;
+  "confirm-password": string;
   "phone-number": string;
-  profession: string;
-  location: string;
-  gender: string;
   skills: string;
   portfolio: string;
+  profession: string;
+  location: string;
   bio: string;
 };
 
 export type ChangeEvent = {
   (e: React.ChangeEvent<any>): void;
-  <T_1 = string | React.ChangeEvent<any>>(field: T_1): T_1 extends React.ChangeEvent<any> ? void : (e: string | React.ChangeEvent<any>) => void;
-}
+  <T_1 = string | React.ChangeEvent<any>>(field: T_1): T_1 extends React.ChangeEvent<any>
+    ? void
+    : (e: string | React.ChangeEvent<any>) => void;
+};

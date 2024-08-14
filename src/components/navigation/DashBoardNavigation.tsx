@@ -162,7 +162,7 @@ export const DashBoardNavigation: React.FC<{
               </div>
 
               {!pathname.includes("/admin") && (
-                <div className="">
+                <div className="mt-4">
                   {/* SignOut icon */}
                   <NavItem to="/" className="flex-row space-x-3 rounded-lg py-2.5 px-3">
                     {({ isActive }) => (

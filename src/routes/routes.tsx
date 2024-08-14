@@ -24,7 +24,7 @@ import { Profile } from "@/pages/dashboard/common/profile/Profile";
 import { AdminProfile } from "@/pages/dashboard/common/profile/components/AdminProfile";
 import { ClientProfile } from "@/pages/dashboard/common/profile/components/ClientProfile";
 import { Applicants } from "@/pages/dashboard/common/applicants/Applicants";
-import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/Login copy";
+import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/AdminLogin";
 import { AdminMessages } from "@/pages/dashboard/common/messages/AdminMesages";
 import { ClientMessages } from "@/pages/dashboard/common/messages/ClientMessages";
 

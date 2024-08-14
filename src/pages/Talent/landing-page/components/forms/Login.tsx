@@ -62,7 +62,7 @@ export const Login: React.FC = () => {
   return (
     <>
       <section className="flex items-center justify-center bg-transparent p-4 sm:p-8 xl:p-0 h-screen">
-        <div className="bg-white lg:bg-transparent md:shadow-lg lg:shadow-none flex-1 flex-shrink-0 max-w-xl lg:grid lg:grid-cols-2 lg:max-w-7xl gap-10 mx-auto relative">
+        <div className="bg-white lg:bg-transparent border lg:border-0 flex-1 flex-shrink-0 max-w-xl lg:grid lg:grid-cols-2 lg:max-w-7xl gap-10 mx-auto relative">
           <header className="bg-none bg-transparent hidden lg:block overflow-auto self-center">
             <Link to="/">
               <img src={CETMASLOGO} alt="Cetmas logo" className="h-16" />
@@ -130,7 +130,7 @@ export const Login: React.FC = () => {
 
               <button
                 type="submit"
-                className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transform hover:-translate-y-1.5 transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4632A8]/70 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto xl:py-4 lg:text-lg lg:w-2/3 xl:mt-40"
+                className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto xl:py-4 lg:text-lg lg:w-2/3 xl:mt-40"
               >
                 Login
               </button>
