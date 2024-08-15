@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export const ApplicantProfile = () => {
+ const ApplicantProfile = () => {
   const navigate= useNavigate()
 
   return (
@@ -100,3 +100,5 @@ export const ApplicantProfile = () => {
     </div>
   );
 };
+
+export default ApplicantProfile

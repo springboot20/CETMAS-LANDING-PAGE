@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Talents: React.FC = () => {
+const Talents: React.FC = () => {
   return (
     <section className="mt-24 relative">
       <div className="max-w-8xl mx-auto p-4">
@@ -228,3 +228,5 @@ export const Talents: React.FC = () => {
     </section>
   )
 }
+
+export default Talents

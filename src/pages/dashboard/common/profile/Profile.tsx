@@ -5,7 +5,7 @@ import { classNames, isFileExtValid } from "@/util";
 import { Switch } from "@headlessui/react";
 import profile from "@/assets/profile-picture.jpg";
 
-export const Profile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Profile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [active, setActive] = useState<boolean>(false);
   const [profilePicture, setProfilePicture] = useState<File>(null!);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -133,3 +133,5 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({ children }) =
     </section>
   );
 };
+
+export default Profile

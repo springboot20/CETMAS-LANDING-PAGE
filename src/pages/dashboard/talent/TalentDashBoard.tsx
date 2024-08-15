@@ -5,7 +5,7 @@ import { RecommendedJobs } from "./components/RecommendedJobs";
 import { GraphIcon } from "@/components/Icons";
 import { Calendar } from "@/components/calender/Calendar";
 
-export const TalentDashBoard: React.FC = () => {
+const TalentDashBoard: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
@@ -76,3 +76,5 @@ export const TalentDashBoard: React.FC = () => {
     </section>
   );
 };
+
+export default TalentDashBoard

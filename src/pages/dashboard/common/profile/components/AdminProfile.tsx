@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AdminProfile: React.FC = () => {
+ const AdminProfile: React.FC = () => {
   return (
     <div className="bg-[#A79BE1]/20 rounded-2xl px-4 lg:px-8 py-7">
       <div className="max-w-2xl mx-auto grid gap-2 grid-cols-1 lg:grid-cols-2 lg:gap-6">
@@ -94,3 +94,5 @@ export const AdminProfile: React.FC = () => {
     </div>
   );
 };
+
+export default AdminProfile

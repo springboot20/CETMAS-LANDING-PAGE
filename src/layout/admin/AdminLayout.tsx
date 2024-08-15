@@ -16,7 +16,7 @@ import { SearchField } from "@/components/forms/SearchField/SearchField";
 import { SelectField } from "@/components/forms/SelectField/SelectField";
 import { Notification } from "@/components/panel/NotificationPanel";
 
-export const AdminLayout: React.FC = () => {
+ const AdminLayout: React.FC = () => {
   const [scrolling, setScrolling] = useState<boolean>(false);
   const { pathname } = useLocation();
   const title = pathname.split("/")[2];
@@ -182,3 +182,5 @@ export const AdminLayout: React.FC = () => {
     </Disclosure>
   );
 };
+
+export default AdminLayout

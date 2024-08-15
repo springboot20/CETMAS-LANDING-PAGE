@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Clients: React.FC = () => {
+ const Clients: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto">
@@ -23,8 +23,9 @@ export const Clients: React.FC = () => {
     </section>
   );
 };
+export default Clients
 
-export const ClientCard = () => {
+const ClientCard = () => {
   const navigate = useNavigate();
 
   return (

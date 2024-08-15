@@ -4,7 +4,7 @@ import { InputField } from "@/components/forms/TextField/InputField";
 import { EmojiIcon } from "@/components/Icons";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
-export const Messages: React.FC = () => {
+const Messages: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-20">
       <div className="lg:flex lg:items-center lg:justify-center">
@@ -74,3 +74,5 @@ export const Messages: React.FC = () => {
     </section>
   );
 };
+
+export default Messages

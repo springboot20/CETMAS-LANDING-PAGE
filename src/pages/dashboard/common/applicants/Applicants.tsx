@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Applicants: React.FC = () => {
+const Applicants: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto">
@@ -24,7 +24,9 @@ export const Applicants: React.FC = () => {
   );
 };
 
-export const TalentCard = () => {
+export default Applicants;
+
+const TalentCard = () => {
   const navigate = useNavigate();
 
   return (

@@ -9,7 +9,7 @@ import { WithdrawModal } from "@/components/modal/Withdraw";
 import { useLocation } from "react-router-dom";
 import { EllipsisVertical } from "lucide-react";
 
-export const Wallet: React.FC = () => {
+const Wallet: React.FC = () => {
   const walletBalance = 100000;
   const inputRef = useRef<HTMLInputElement>(null);
   const [activeHistory, setActiveHistory] = useState<string>("receive");
@@ -175,3 +175,5 @@ export const Wallet: React.FC = () => {
     </>
   );
 };
+
+export default Wallet

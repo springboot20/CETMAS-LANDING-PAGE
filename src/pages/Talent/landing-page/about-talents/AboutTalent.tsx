@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-export const AboutTalent: React.FC = () => {
+const AboutTalent: React.FC = () => {
   return (
     <Fragment>
       <section className="z-10">
@@ -110,8 +110,10 @@ export const AboutTalent: React.FC = () => {
             </div>
           </div>
         </div>
-        </section>w
+        </section>
       </section>
     </Fragment>
   );
 };
+
+export default AboutTalent

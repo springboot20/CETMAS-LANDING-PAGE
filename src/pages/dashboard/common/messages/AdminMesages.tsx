@@ -5,7 +5,7 @@ import { EmojiIcon, MagnifyingGlass } from "@/components/Icons";
 import { Bars3Icon, PaperAirplaneIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { classNames } from "@/util";
 
-export const AdminMessages: React.FC = () => {
+const AdminMessages: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isPanelOpen, setIsPanelOpen] = useState<boolean>(false);
 
@@ -593,3 +593,5 @@ export const AdminMessages: React.FC = () => {
     </section>
   );
 };
+
+export default AdminMessages

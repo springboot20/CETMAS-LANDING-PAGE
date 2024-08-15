@@ -1,35 +1,59 @@
 import { createBrowserRouter } from "react-router-dom";
+import { lazy } from "react";
 
-import { TalentLayout } from "@/layout/talent/TalentLayout";
-import { LandingLayout } from "@/layout/LandingLayout";
-import { ClientDashBoard } from "@/pages/dashboard/client/ClientDashBoard";
-import { Messages } from "@/pages/dashboard/common/messages/TalentMessages";
-import { TalentProfile } from "@/pages/dashboard/common/profile/components/TalentProfile";
-import { Wallet } from "@/pages/dashboard/common/wallet/Wallet";
-import { Jobs } from "@/pages/dashboard/talent/jobs/Jobs";
-import { JobDescription } from "@/pages/dashboard/talent/components/Description";
-import { SavedJobs } from "@/pages/dashboard/talent/components/Saved";
-import { TalentDashBoard } from "@/pages/dashboard/talent/TalentDashBoard";
-import { AboutTalent } from "@/pages/Talent/landing-page/about-talents/AboutTalent";
+// layouts
+const LandingLayout = lazy(() => import("@/layout/LandingLayout"));
+const TalentLayout = lazy(() => import("@/layout/talent/TalentLayout"));
+const ClientLayout = lazy(() => import("@/layout/client/ClientLayout"));
+const AdminLayout = lazy(() => import("@/layout/admin/AdminLayout"));
+const AboutTalent = lazy(() => import("@/pages/Talent/landing-page/about-talents/AboutTalent"));
+
+// dashboards
+const ClientDashBoard = lazy(() => import("@/pages/dashboard/client/ClientDashBoard"));
+const TalentDashBoard = lazy(() => import("@/pages/dashboard/talent/TalentDashBoard"));
+const AdminDashBoard = lazy(() => import("@/pages/dashboard/admin/AdminDashboard"));
+
+// jobs
+const Jobs = lazy(() => import("@/pages/dashboard/talent/jobs/Jobs"));
+const JobDescription = lazy(() => import("@/pages/dashboard/talent/components/Description"));
+const ClientJobs = lazy(() => import("@/pages/dashboard/client/Jobs/Jobs"));
+const SavedJobs = lazy(() => import("@/pages/dashboard/talent/components/Saved"));
+
+// messages
+const Messages = lazy(() => import("@/pages/dashboard/common/messages/TalentMessages"));
+const AdminMessages = lazy(() => import("@/pages/dashboard/common/messages/AdminMesages"));
+const ClientMessages = lazy(() => import("@/pages/dashboard/common/messages/ClientMessages"));
+
+// profiles
+const TalentProfile = lazy(
+  () => import("@/pages/dashboard/common/profile/components/TalentProfile"),
+);
+const AdminProfile = lazy(() => import("@/pages/dashboard/common/profile/components/AdminProfile"));
+const Profile = lazy(() => import("@/pages/dashboard/common/profile/Profile"));
+const LandingPage = lazy(() => import("@/pages/Talent/landing-page/Index"));
+const ApplicantProfile = lazy(
+  () => import("@/pages/dashboard/common/profile/components/Applicant"),
+);
+const ClientProfile = lazy(
+  () => import("@/pages/dashboard/common/profile/components/ClientProfile"),
+);
+
+// wallet
+const Wallet = lazy(() => import("@/pages/dashboard/common/wallet/Wallet"));
+
+// forms
 import { Login } from "@/pages/Talent/landing-page/components/forms/Login";
 import { ClientForm } from "@/pages/Talent/landing-page/components/forms/signup-forms/ClientForm";
 import { TalentForm } from "@/pages/Talent/landing-page/components/forms/signup-forms/TalentForm";
-import { LandingPage } from "@/pages/Talent/landing-page/Index";
-import { Talents } from "@/pages/Talent/landing-page/talents/Talents";
-import { ClientLayout } from "@/layout/client/ClientLayout";
-import { AdminLayout } from "@/layout/admin/AdminLayout";
-import { AdminDashBoard } from "@/pages/dashboard/admin/AdminDashboard";
-import { ClientJobs } from "@/pages/dashboard/client/Jobs/Jobs";
-import { NotFound } from "@/components/NotFound";
-import { Profile } from "@/pages/dashboard/common/profile/Profile";
-import { AdminProfile } from "@/pages/dashboard/common/profile/components/AdminProfile";
-import { ClientProfile } from "@/pages/dashboard/common/profile/components/ClientProfile";
-import { Applicants } from "@/pages/dashboard/common/applicants/Applicants";
 import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/AdminLogin";
-import { AdminMessages } from "@/pages/dashboard/common/messages/AdminMesages";
-import { ClientMessages } from "@/pages/dashboard/common/messages/ClientMessages";
-import { ApplicantProfile } from "@/pages/dashboard/common/profile/components/Applicant";
-import { Clients } from "@/pages/dashboard/common/clients/Clients";
+
+// others
+const Applicants = lazy(() => import("@/pages/dashboard/common/applicants/Applicants"));
+const Talents = lazy(() => import("@/pages/Talent/landing-page/talents/Talents"));
+const Clients = lazy(() => import("@/pages/dashboard/common/clients/Clients"));
+
+// notfound {*}
+import { NotFound } from "@/components/NotFound";
 
 export const routes = createBrowserRouter([
   {

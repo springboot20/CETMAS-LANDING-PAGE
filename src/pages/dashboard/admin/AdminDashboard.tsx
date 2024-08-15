@@ -2,7 +2,7 @@ import React from "react";
 import { classNames } from "@/util";
 import { StarIcon } from "@heroicons/react/24/outline";
 
-export const AdminDashBoard: React.FC = () => {
+const AdminDashBoard: React.FC = () => {
   return (
     <section className="mt-32 px-4 relative z-10 w-full flex lg:justify-between flex-col xl:flex-row xl:gap-3 items-stretch h-screen flex-shrink-0">
       <div className="space-y-6 flex-shrink-0 max-w-5xl w-full">
@@ -518,3 +518,5 @@ const Card: React.FC<{
     </div>
   );
 };
+
+export default AdminDashBoard;

@@ -3,7 +3,7 @@ import React from "react";
 import { PendingJobs } from "./components/Pending";
 import { RecommendedTalents } from "./components/Recommended";
 
-export const ClientDashBoard: React.FC = () => {
+ const ClientDashBoard: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
@@ -89,3 +89,5 @@ const Card: React.FC<{
     </div>
   );
 };
+
+export default ClientDashBoard

@@ -2,7 +2,7 @@ import { Button } from "@/components/button/Button";
 import { InputField } from "@/components/forms/TextField/InputField";
 import React from "react";
 
-export const TalentProfile: React.FC = () => {
+const TalentProfile: React.FC = () => {
   return (
     <form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
@@ -90,9 +90,7 @@ export const TalentProfile: React.FC = () => {
             name="about"
             rows={3}
             className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
-            defaultValue={
-              "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor..."
-            }
+            defaultValue={"Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor..."}
           />
         </fieldset>
 
@@ -142,3 +140,5 @@ export const TalentProfile: React.FC = () => {
     </form>
   );
 };
+
+export default TalentProfile;

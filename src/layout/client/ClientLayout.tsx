@@ -15,7 +15,7 @@ import { classNames } from "@/util";
 import { SearchField } from "@/components/forms/SearchField/SearchField";
 import { Notification } from "@/components/panel/NotificationPanel";
 
-export const ClientLayout: React.FC = () => {
+const ClientLayout: React.FC = () => {
   const [scrolling, setScrolling] = useState<boolean>(false);
   const { pathname } = useLocation();
   const title = pathname.split("/")[2];
@@ -175,3 +175,5 @@ export const ClientLayout: React.FC = () => {
     </Disclosure>
   );
 };
+
+export default ClientLayout

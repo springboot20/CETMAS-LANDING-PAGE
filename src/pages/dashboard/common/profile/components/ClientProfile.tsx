@@ -2,9 +2,7 @@ import React from "react";
 import { InputField } from "@/components/forms/TextField/InputField";
 import { Button } from "@/components/button/Button";
 
-// type Init
-
-export const ClientProfile: React.FC = () => {
+ const ClientProfile: React.FC = () => {
   return (
     <form action="">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
@@ -114,3 +112,5 @@ export const ClientProfile: React.FC = () => {
     </form>
   );
 };
+
+export default ClientProfile

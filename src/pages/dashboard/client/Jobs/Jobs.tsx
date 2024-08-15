@@ -5,7 +5,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";
 import { Completed } from "@/components/modal/Completed";
 
-export const ClientJobs = () => {
+ const ClientJobs = () => {
   const [jobStatus, setJobStatus] = useState<string>("posted");
   const statusList = useRef<HTMLUListElement>(null);
   const [open, setOpen] = useState<boolean>(false);
@@ -173,3 +173,6 @@ export const ClientJobs = () => {
     </>
   );
 };
+
+
+export default ClientJobs

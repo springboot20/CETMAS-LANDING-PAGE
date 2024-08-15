@@ -1,8 +1,4 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import React, { Fragment } from "react";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/outline";
 import CTEMASLOGO from "@/assets/logo.png";
@@ -12,7 +8,7 @@ import { Footer } from "@/components/footer/Footer.tsx";
 
 type Routes = Array<{ title: string; to: string; current: boolean }>;
 
-export const LandingLayout: React.FC = () => {
+const LandingLayout: React.FC = () => {
   const navRoutes: Routes = [
     {
       title: "About Us",
@@ -35,10 +31,7 @@ export const LandingLayout: React.FC = () => {
 
   return (
     <Fragment>
-      <Disclosure
-        as="nav"
-        className={"fixed top-0 left-0 right-0 bg-[#4632A8] z-20"}
-      >
+      <Disclosure as="nav" className={"fixed top-0 left-0 right-0 bg-[#4632A8] z-20"}>
         {({ open }) => (
           <>
             <div className="mx-auto max-w-8xl px-2 sm:px-3 w-full">
@@ -47,26 +40,16 @@ export const LandingLayout: React.FC = () => {
                   <DisclosureButton className="inline-flex items-center justify-center rounded-md text-white">
                     <span className="sr-only">Open Menu</span>
                     {open ? (
-                      <XMarkIcon
-                        className="block h-10 w-10"
-                        aria-hidden="true"
-                      />
+                      <XMarkIcon className="block h-10 w-10" aria-hidden="true" />
                     ) : (
-                      <Bars3Icon
-                        className="block h-10 w-10"
-                        aria-hidden="true"
-                      />
+                      <Bars3Icon className="block h-10 w-10" aria-hidden="true" />
                     )}
                   </DisclosureButton>
                 </div>
 
                 <div className="flex flex-1 items-center justify-center lg:justify-start">
                   <div className="flex flex-shrink-0 items-center">
-                    <img
-                      src={CTEMASLOGO}
-                      alt="CETMAS Logo"
-                      className="h-11 sm:h-14"
-                    />
+                    <img src={CTEMASLOGO} alt="CETMAS Logo" className="h-11 sm:h-14" />
                   </div>
                 </div>
 
@@ -99,9 +82,7 @@ export const LandingLayout: React.FC = () => {
                     to={item.to}
                     className={({ isActive }) =>
                       `${
-                        isActive
-                          ? "text-[#4632A8]/70 underline"
-                          : "text-[#4632A8]"
+                        isActive ? "text-[#4632A8]/70 underline" : "text-[#4632A8]"
                       } block rounded-md px-3 py-3.5 text-xl font-normal transition-all flex-shrink-0`
                     }
                     aria-current={item.current ? "page" : undefined}
@@ -129,3 +110,5 @@ export const LandingLayout: React.FC = () => {
     </Fragment>
   );
 };
+
+export default LandingLayout;

@@ -6,7 +6,7 @@ import { HeartIcon } from "@heroicons/react/24/outline";
 import { classNames } from "@/util";
 import { Modal } from "@/components/modal/Modal";
 
-export const JobDescription: React.FC = () => {
+ const JobDescription: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClose = () => {
@@ -183,3 +183,5 @@ export const JobDescription: React.FC = () => {
     </>
   );
 };
+
+export default JobDescription

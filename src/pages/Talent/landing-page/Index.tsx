@@ -13,7 +13,7 @@ import { TestimonialSection } from './components/testimonial/TestimonialSection.
 import { TalentsSection } from './components/talents/TalentsSection.tsx';
 /** Landing page component imports ends */
 
-export const LandingPage: React.FC = () => {
+const LandingPage: React.FC = () => {
   return (
     <Fragment>
       {/* App navigation start */}
@@ -46,3 +46,5 @@ export const LandingPage: React.FC = () => {
     </Fragment>
   );
 };
+
+export default LandingPage
