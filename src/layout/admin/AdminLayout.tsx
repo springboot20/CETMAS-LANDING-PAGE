@@ -6,8 +6,8 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import {
   BellIcon,
   DashBoardIcon,
+  JobIcon,
   MessageIcon,
-  ProfileIcon,
   SignOutIcon,
   WalletIcon,
 } from "@/components/Icons";
@@ -42,25 +42,22 @@ export const AdminLayout: React.FC = () => {
     }
   };
 
-  console.log(title)
+  console.log(title);
 
   let displayText: string | undefined;
 
   switch (title) {
     case "dashboard":
-      displayText = "hi jane williams";
+      displayText = "Hi Jane Williams";
       break;
     case "jobs":
-      displayText = "list of jobs";
+      displayText = "List of Jobs";
       break;
     case "messages":
       displayText = "";
       break;
     case "wallet":
-      displayText = "wallet";
-      break;
-    case "profile":
-      displayText = "profile";
+      displayText = "Wallet";
       break;
     default:
       displayText = undefined;
@@ -72,6 +69,12 @@ export const AdminLayout: React.FC = () => {
       to: "/admin/dashboard",
       label: "dashboard",
       Icon: DashBoardIcon,
+      current: true,
+    },
+    {
+      to: "/admin/jobs",
+      label: "jobs",
+      Icon: JobIcon,
       current: true,
     },
     {
@@ -87,12 +90,6 @@ export const AdminLayout: React.FC = () => {
       current: true,
     },
     {
-      to: "/admin/profile",
-      label: "profile",
-      Icon: ProfileIcon,
-      current: true,
-    },
-    {
       to: "/",
       label: "logout",
       Icon: SignOutIcon,
@@ -103,17 +100,10 @@ export const AdminLayout: React.FC = () => {
   return (
     <Disclosure as="div">
       <>
-        <Notification
-          open={openNotification}
-          setOpenNotification={setOpenNotification}
-        />
+        <Notification open={openNotification} setOpenNotification={setOpenNotification} />
         <div className="relative z-10 w-full flex lg:justify-between items-stretch h-screen flex-shrink-0">
           {/* Navigation starts */}
-          <DashBoardNavigation
-            open={open}
-            close={handleClose}
-            routes={routes}
-          />
+          <DashBoardNavigation open={open} close={handleClose} routes={routes} />
           {/* Navigation starts */}
 
           {/* Main section starts */}
@@ -126,10 +116,23 @@ export const AdminLayout: React.FC = () => {
                 )}
               >
                 <div className="flex justify-between items-center h-full">
-                  <div className="flex items-start space-x-4">
-                    <h3 className="text-xl sm:text-3xl font-bold lg:text-2xl xl:text-4xl capitalize text-gray-800">
-                      {displayText}
-                    </h3>
+                  <div>
+                    <div className="flex items-start">
+                      <h3 className="text-xl sm:text-3xl font-bold lg:text-2xl xl:text-4xl text-gray-800">
+                        {displayText}
+                        {pathname.split("/")[3] && "profile"}
+                      </h3>
+                    </div>
+                    {title === "clients" && !pathname.split("/")[3] ? (
+                      <div className="flex items-center space-x-3">
+                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold capitalize text-gray-800">
+                          clients
+                        </h2>
+                        <span className="inline-flex items-center bg-[#4632A8] justify-center h-8 w-10 rounded-lg text-white text-base sm:text-lg font-thin">
+                          12
+                        </span>
+                      </div>
+                    ) : null}
                   </div>
 
                   {pathname.includes("/jobs") && (
@@ -163,10 +166,7 @@ export const AdminLayout: React.FC = () => {
                         className="inline-flex items-center justify-center rounded-md text-gray-900"
                       >
                         <span className="sr-only">Open Menu</span>
-                        <Bars3Icon
-                          className="block h-8 w-8 sm:h-10 sm:w-10"
-                          aria-hidden="true"
-                        />
+                        <Bars3Icon className="block h-8 w-8 sm:h-10 sm:w-10" aria-hidden="true" />
                       </button>
                     </div>
                   </div>

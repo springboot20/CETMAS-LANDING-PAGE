@@ -1,3 +1,5 @@
+import { createBrowserRouter } from "react-router-dom";
+
 import { TalentLayout } from "@/layout/talent/TalentLayout";
 import { LandingLayout } from "@/layout/LandingLayout";
 import { ClientDashBoard } from "@/pages/dashboard/client/ClientDashBoard";
@@ -14,7 +16,6 @@ import { ClientForm } from "@/pages/Talent/landing-page/components/forms/signup-
 import { TalentForm } from "@/pages/Talent/landing-page/components/forms/signup-forms/TalentForm";
 import { LandingPage } from "@/pages/Talent/landing-page/Index";
 import { Talents } from "@/pages/Talent/landing-page/talents/Talents";
-import { createBrowserRouter } from "react-router-dom";
 import { ClientLayout } from "@/layout/client/ClientLayout";
 import { AdminLayout } from "@/layout/admin/AdminLayout";
 import { AdminDashBoard } from "@/pages/dashboard/admin/AdminDashboard";
@@ -28,6 +29,7 @@ import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/AdminLo
 import { AdminMessages } from "@/pages/dashboard/common/messages/AdminMesages";
 import { ClientMessages } from "@/pages/dashboard/common/messages/ClientMessages";
 import { ApplicantProfile } from "@/pages/dashboard/common/profile/components/Applicant";
+import { Clients } from "@/pages/dashboard/common/clients/Clients";
 
 export const routes = createBrowserRouter([
   {
@@ -171,6 +173,10 @@ export const routes = createBrowserRouter([
           </Profile>
         ),
       },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
   },
   {
@@ -182,6 +188,10 @@ export const routes = createBrowserRouter([
         element: <AdminDashBoard />,
       },
       {
+        path: "jobs",
+        element: <AdminDashBoard />,
+      },
+      {
         path: "messages",
         element: <AdminMessages />,
       },
@@ -190,16 +200,38 @@ export const routes = createBrowserRouter([
         element: <Wallet />,
       },
       {
-        path: "profile",
-        element: (
-          <Profile>
-            <AdminProfile />
-          </Profile>
-        ),
+        path: "applicants",
+        children: [
+          {
+            index: true,
+            element: <Applicants />,
+          },
+          {
+            path: ":id",
+            element: (
+              <Profile>
+                <ApplicantProfile />
+              </Profile>
+            ),
+          },
+        ],
       },
       {
-        path: "applicants",
-        element: <Applicants />,
+        path: "clients",
+        children: [
+          {
+            index: true,
+            element: <Clients />,
+          },
+          {
+            path: ":id",
+            element: (
+              <Profile>
+                <AdminProfile />
+              </Profile>
+            ),
+          },
+        ],
       },
     ],
   },

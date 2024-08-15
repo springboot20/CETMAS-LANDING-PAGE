@@ -1,30 +1,30 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export const Applicants: React.FC = () => {
+export const Clients: React.FC = () => {
   return (
     <section className="mt-32 px-4 lg:px-10">
       <div className="mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
-          <TalentCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
+          <ClientCard />
         </div>
       </div>
     </section>
   );
 };
 
-export const TalentCard = () => {
+export const ClientCard = () => {
   const navigate = useNavigate();
 
   return (
@@ -42,7 +42,7 @@ export const TalentCard = () => {
 
       <div className="flex jusify-center items-center mx-auto">
         <button
-          onClick={() => navigate("/client/applicants/:id")}
+          onClick={() => navigate("/admin/clients/:id")}
           className="px-8 text-base sm:text-lg font-normal py-2.5 text-white rounded-lg bg-[#4632A8] focus:border-0 focus:ring-2 focus:ring-offset-1 focus:ring-[#4632A8] hover:bg-[#4632A8]/80 transition active:bg-[#4632A8]"
         >
           View profile

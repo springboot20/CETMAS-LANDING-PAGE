@@ -5,9 +5,7 @@ import { classNames, isFileExtValid } from "@/util";
 import { Switch } from "@headlessui/react";
 import profile from "@/assets/profile-picture.jpg";
 
-export const Profile: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const Profile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [active, setActive] = useState<boolean>(false);
   const [profilePicture, setProfilePicture] = useState<File>(null!);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -92,9 +90,7 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
             </div>
 
             <div className="text-center">
-              <h3 className="text-base font-bold sm:text-lg capitalize lg:text-xl">
-                jane william
-              </h3>
+              <h3 className="text-base font-bold sm:text-lg capitalize lg:text-xl">jane william</h3>
               <p className="text-base font-medium text-gray-800 sm:text-xl lg:text-xl capitalize">
                 product designer
               </p>
@@ -128,9 +124,7 @@ export const Profile: React.FC<{ children: React.ReactNode }> = ({
             <p className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 capitalize">
               jobs done
             </p>
-            <p className="text-base sm:text-lg lg:text-xl font-bold text-gray-800">
-              10
-            </p>
+            <p className="text-base sm:text-lg lg:text-xl font-bold text-gray-800">10</p>
           </Card>
         </div>
 
