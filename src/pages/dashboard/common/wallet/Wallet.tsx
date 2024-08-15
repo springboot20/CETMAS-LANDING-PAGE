@@ -42,7 +42,7 @@ const Wallet: React.FC = () => {
                 </button>
               ) : null}
               <div className="gap-5 grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center z-10 relative lg:gap-10">
-                <Card className="w-full bg-white/30 rounded-2xl flex items-center flex-col justify-center gap-20 h-48 p-6 text-white">
+                <Card className="w-full bg-white/30 rounded-2xl flex items-center flex-col justify-center gap-20 h-48 md:h-full p-6 text-white">
                   <h3 className="capitalize text-2xl md:text-2xl lg:text-3xl font-normal tracking-wide">
                     wallet balance
                   </h3>
@@ -150,24 +150,26 @@ const Wallet: React.FC = () => {
             </div>
 
             <div className="mt-5 space-y-2">
-              <table className="w-full border-spacing-10">
-                <thead className="w-full">
-                  <tr className="text-left capitalize text-sm sm:text-base lg:text-xl font-semibold">
-                    <th>amount</th>
-                    <th>data</th>
-                    <th>time</th>
-                    <th>status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="h-10 bg-white text-gray-700 text-sm sm:text-base lg:text-xl font-medium">
-                    <td className="rounded-tl-lg rounded-bl-lg">{formatPrice(500)}</td>
-                    <td>2024-05-28</td>
-                    <td>11:45 am</td>
-                    <td className="rounded-tr-lg rounded-br-lg">successful</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div>
+                <table className="min-w-full border-spacing-10">
+                  <thead>
+                    <tr className="text-left capitalize text-sm sm:text-base font-semibold">
+                      <th className="px-2 sm:px-0">Amount</th>
+                      <th className="px-2 sm:px-0">Date</th>
+                      <th className="px-2 sm:px-0">Time</th>
+                      <th className="px-2 sm:px-0">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody className="overflow-x-auto w-full">
+                    <tr className="truncate text-ellipsis h-10 bg-white text-gray-700 text-xs sm:text-base font-semibold">
+                      <td className="rounded-tl-lg rounded-bl-lg">{formatPrice(500)}</td>
+                      <td className="px-2 sm:px-0">2024-05-28</td>
+                      <td className="px-2 sm:px-0">11:45 am</td>
+                      <td className="rounded-tr-lg rounded-br-lg">Successful</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -176,4 +178,4 @@ const Wallet: React.FC = () => {
   );
 };
 
-export default Wallet
+export default Wallet;
