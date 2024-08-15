@@ -1,6 +1,6 @@
 import React from "react";
-import data from "../../../../../util/data";
-import { JobCard } from "./JobCard";
+import data from "@/util/data";
+import { JobCard } from "./Card"; 
 
 export const JobLists: React.FC = () => {
   return (
