@@ -119,8 +119,9 @@ import { Notification } from "@/components/panel/NotificationPanel";
                   <div>
                     <div className="flex items-start">
                       <h3 className="text-xl sm:text-3xl font-bold lg:text-2xl xl:text-4xl text-gray-800">
-                        {displayText}
-                        {pathname.split("/")[3] && "profile"}
+                        {!pathname.includes("/jobs/:id") && displayText}
+                        {pathname.split("/")[3] && !pathname.includes("/jobs/:id") && "Profile"}
+                        {pathname.includes("/jobs/:id")  && "Job Description"}
                       </h3>
                     </div>
                     {title === "clients" && !pathname.split("/")[3] ? (
@@ -135,7 +136,7 @@ import { Notification } from "@/components/panel/NotificationPanel";
                     ) : null}
                   </div>
 
-                  {pathname.includes("/jobs") && (
+                  {pathname.includes("/jobs") && !pathname.includes("/jobs/:id")  && (
                     <div className="hidden lg:flex items-center space-x-3">
                       <div className="hidden lg:block">
                         <SearchField ref={searchInputRef} />

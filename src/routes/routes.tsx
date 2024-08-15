@@ -15,7 +15,9 @@ const AdminDashBoard = lazy(() => import("@/pages/dashboard/admin/AdminDashboard
 
 // jobs
 const Jobs = lazy(() => import("@/pages/dashboard/talent/jobs/Jobs"));
+const AminJobs = lazy(() => import("@/pages/dashboard/admin/jobs/Jobs"));
 const JobDescription = lazy(() => import("@/pages/dashboard/talent/components/Description"));
+const AdminJobDescription = lazy(() => import("@/pages/dashboard/admin/components/Description"));
 const ClientJobs = lazy(() => import("@/pages/dashboard/client/Jobs/Jobs"));
 const SavedJobs = lazy(() => import("@/pages/dashboard/talent/components/Saved"));
 
@@ -213,7 +215,16 @@ export const routes = createBrowserRouter([
       },
       {
         path: "jobs",
-        element: <AdminDashBoard />,
+        children: [
+          {
+            index: true,
+            element: <AminJobs />,
+          },
+          {
+            path: ":id",
+            element: <AdminJobDescription />,
+          },
+        ],
       },
       {
         path: "messages",
