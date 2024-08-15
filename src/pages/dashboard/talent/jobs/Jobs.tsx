@@ -1,6 +1,6 @@
 import React from "react";
-import { JobLists } from "./Jobs/JobLists";
-import { JobFilter } from "./Jobs/JobFilter";
+import { JobLists } from "./Jobs/Lists";
+import { JobFilter } from "./Jobs/Filter";
 
 export const Jobs: React.FC = () => {
   return (

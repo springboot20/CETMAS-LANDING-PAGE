@@ -1,5 +1,5 @@
 import data from "@/util/data";
-import { JobCard } from "../components/JobsCard";
+import { JobCard } from "../components/Card";
 import { classNames } from "@/util";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";

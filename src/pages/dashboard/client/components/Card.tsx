@@ -2,9 +2,9 @@ import React from "react";
 import { Card } from "@/components/card/Card";
 import { MapPinIcon } from "@/components/Icons";
 import { Button } from "@/components/button/Button";
-import { JobCardProps } from "@/types/jobs";
+import { ClientJobs } from "@/types/jobs";
 
-export const JobCard: React.FC<JobCardProps> = (props) => {
+export const JobCard: React.FC<ClientJobs> = (props) => {
   return (
     <Card className="bg-[#A79BE1B2]/20 rounded-xl p-6 md:p-10">
       <header className="flex justify-between items-start">
@@ -49,21 +49,21 @@ export const JobCard: React.FC<JobCardProps> = (props) => {
         </div>
         {props.status === "posted" ? (
           <button
-            onClick={() => props.setStatus("pending")}
+            onClick={() => props?.setStatus("pending")}
             className="mt-5 sm:mt-0 text-base font-normal px-4 py-2.5 lg:py-1.5 lg:px-2.5 xl:px-5  rounded-lg border border-[#4632A8] text-[#4632A8]"
           >
             Move to pending
           </button>
         ) : props.status === "pending" ? (
           <button
-            onClick={() => props.setOpen(true)}
+            onClick={() => props?.setOpen(true)}
             className="mt-5 sm:mt-0 text-base font-normal px-4 py-2.5 lg:py-1.5 lg:px-2.5 xl:px-5  rounded-lg border border-[#4632A8] text-[#4632A8]"
           >
             Move to completed
           </button>
         ) : props.status === "completed" ? (
           <button
-            onClick={() => props.setStatus("pending")}
+            onClick={() => props?.setStatus("pending")}
             className="mt-5 sm:mt-0 text-base font-normal px-4 py-2.5 lg:py-1.5 lg:px-2.5 xl:px-5  rounded-lg border border-[#4632A8] text-[#4632A8]"
           >
             Move to pending

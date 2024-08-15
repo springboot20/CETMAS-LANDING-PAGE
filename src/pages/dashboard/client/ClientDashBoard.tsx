@@ -1,7 +1,7 @@
 import { classNames } from "@/util";
 import React from "react";
-import { PendingJobs } from "./components/PendingJobs";
-import { RecommendedTalents } from "./components/RecommendTalents";
+import { PendingJobs } from "./components/Pending";
+import { RecommendedTalents } from "./components/Recommended";
 
 export const ClientDashBoard: React.FC = () => {
   return (

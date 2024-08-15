@@ -1,4 +1,4 @@
-export type JobCardProps = {
+export interface TalentJobProps {
   id: number;
   title: string;
   location: string;
@@ -7,4 +7,10 @@ export type JobCardProps = {
   type: string;
   duration: number;
   description: string;
-};
+}
+
+export interface ClientJobs extends TalentJobProps {
+  status: string;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setStatus: React.Dispatch<React.SetStateAction<string>>;
+}
