@@ -55,9 +55,6 @@ export const ClientLayout: React.FC = () => {
     case "wallet":
       displayText = "wallet";
       break;
-    case "profile":
-      displayText = "profile";
-      break;
     default:
       displayText = undefined;
       break;
@@ -99,6 +96,7 @@ export const ClientLayout: React.FC = () => {
   ];
 
   console.log(pathname.includes("/jobs"));
+
   return (
     <Disclosure as="div">
       <>
@@ -120,7 +118,7 @@ export const ClientLayout: React.FC = () => {
                 <div className="flex justify-between items-center h-full">
                   <div className="flex items-start space-x-4">
                     <div>
-                      {title === "applicants" ? (
+                      {title === "applicants" && !pathname.split("/")[3] ? (
                         <div className="flex items-center space-x-3">
                           <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold capitalize text-gray-800">
                             talents
@@ -132,11 +130,13 @@ export const ClientLayout: React.FC = () => {
                       ) : null}
                       <h3 className="text-xl sm:text-3xl font-bold lg:text-2xl xl:text-4xl capitalize text-gray-800">
                         {displayText}
+                        {pathname.split("/")[3] && "profile"}
                       </h3>
                     </div>
                   </div>
 
-                  {pathname.includes("/jobs") || pathname.includes("/applicants") ? (
+                  {pathname.includes("/jobs") ||
+                  (pathname.includes("/applicants") && !pathname.includes("/applicants/:id")) ? (
                     <div className="hidden lg:flex items-center space-x-3">
                       <div className="hidden lg:block">
                         <SearchField ref={searchInputRef} />

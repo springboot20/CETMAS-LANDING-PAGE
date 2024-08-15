@@ -1,109 +1,116 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { InputField } from "@/components/forms/TextField/InputField";
+import { Button } from "@/components/button/Button";
+
+// type Init
 
 export const ClientProfile: React.FC = () => {
-  const navigate= useNavigate()
-
   return (
-    <div className="bg-[#A79BE1]/20 rounded-2xl px-4 lg:px-8 py-7">
-      <div className="max-w-2xl mx-auto grid gap-2 grid-cols-1 lg:grid-cols-2 lg:gap-6">
-        <div className="inline-flex space-x-2">
-          <h3 className="capitalize text-sm font-semibold">name: </h3>
-          <p className="capitalize text-sm font-normal text-gray-700">
-            jane william
-          </p>
-        </div>
+    <form action="">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-9">
+        <fieldset className="space-y-2">
+          <InputField
+            id="name"
+            type="text"
+            htmlFor="name"
+            label="name"
+            placeholder="Jane"
+            labelClass="capitalize text-base lg:text-xl"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-        <div className="inline-flex space-x-2 lg:place-self-end">
-          <h3 className="capitalize text-sm font-semibold">talent: </h3>
-          <p className="capitalize text-sm font-normal text-gray-700">
-            product manager
-          </p>
-        </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="company-name"
+            type="text"
+            htmlFor="company-name"
+            label="company name"
+            placeholder="Williams"
+            labelClass="capitalize text-base lg:text-xl"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-        <div className="inline-flex space-x-2">
-          <h3 className="capitalize text-sm font-semibold">portfolio: </h3>
-          <p className="capitalize text-sm font-normal text-gray-700">
-            Lorem ipsum dolor sit ametm
-          </p>
-        </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="phone-number"
+            type="tel"
+            htmlFor="phone-number"
+            label="phone number"
+            labelClass="capitalize text-base lg:text-xl"
+            placeholder="08012345678"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-        <div className="inline-flex space-x-2 lg:place-self-end">
-          <h3 className="uppercase text-sm font-semibold">cv: </h3>
-          <p className="text-sm font-normal text-gray-700">Google drive link</p>
-        </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="email"
+            type="email"
+            htmlFor="email"
+            label="email address"
+            labelClass="capitalize text-base lg:text-xl"
+            placeholder="Janewilliams@gmail.com"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-        <div className="w-full flex items-start space-x-4 col-span-full">
-          <h3 className="capitalize text-sm font-semibold">bio: </h3>
-          <p className="text-sm font-normal text-gray-700 text-justify">
-            Lorem ipsum dolor sit amet consectetur. Adipiscing varius tincidunt
-            quisque duis aliquam adipiscing. Ornare cursus erat fringilla vel.
-            Enim sit egestas pellentesque lacus. Aenean tellus dolor magna arcu.
-            Magna sit elit risus id tristique tincidunt viverra. Tincidunt
-            viverra aliquet in massa integer consectetur. Lorem facilisi quam mi
-            proin commodo. Est facilisis bibendum nullam rhoncus dolor metus
-            imperdiet nisl. Mattis malesuada maecenas ultrices mattis molestie
-            hendrerit.
-          </p>
-        </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="city"
+            type="text"
+            htmlFor="city"
+            label="city"
+            labelClass="capitalize text-base lg:text-xl"
+            placeholder="Ogbomoso"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-        <div className="w-full flex items-start space-x-4 col-span-full">
-          <h3 className="capitalize text-sm font-semibold">skills: </h3>
-          <ul className="grid text-sm text-gray-700 sm:grid-cols-2 gap-x-9 gap-y-2">
-            <li>UI Design</li>
-            <li>UX Research</li>
-            <li>Wire Framing</li>
-            <li>Prototyping</li>
-            <li>UX Design</li>
-            <li>Mockup</li>
-          </ul>
-        </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="state"
+            type="text"
+            htmlFor="state"
+            label="state"
+            labelClass="capitalize text-base lg:text-xl"
+            placeholder="Oyo"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-        <div className="w-full flex items-start flex-col sm:flex-row space-y-2 sm:space-y-0 space-x-2 2xl:space-x-5 col-span-full">
-          <h3 className="capitalize text-base font-semibold flex-shrink-0">
-            employement history:
-          </h3>
-          <div className="space-y-6">
-            <div className="flex items-stretch flex-col space-y-2 2xl:flex-row 2xl:space-y-0 2xl:space-x-4">
-              <h4 className="capitalize text-base font-medium text-gray-700 flex-shrink-0 ">
-                jan 2023 - mar 2023
-              </h4>
-              <div className="space-y-1">
-                <h3 className="capitalize text-base font-semibold text-gray-700 flex-shrink-0">
-                  Product Designer at Cephas ICT Hub
-                </h3>
-                <p className="text-sm text-gray-700 font-normal">
-                  Lorem ipsum dolor sit amet consectetur. Adipiscing varius
-                  tincidunt quisque duis aliquam adipiscing. Ornare cursus erat
-                  fringilla
-                </p>
-              </div>
-            </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="website"
+            type="text"
+            htmlFor="website"
+            label="website"
+            labelClass="capitalize text-base lg:text-xl"
+            placeholder="lorem ipsum dolor sit amet"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
 
-            <div className="flex items-stretch flex-col space-y-2 2xl:flex-row 2xl:space-y-0 2xl:space-x-4">
-              <h4 className="capitalize text-base font-medium text-gray-700 flex-shrink-0 ">
-                jan 2023 - mar 2023
-              </h4>
-              <div className="space-y-1">
-                <h3 className="capitalize text-base font-semibold text-gray-700 flex-shrink-0">
-                  Product Designer at Cephas ICT Hub
-                </h3>
-                <p className="text-sm text-gray-700 font-normal">
-                  Lorem ipsum dolor sit amet consectetur. Adipiscing varius
-                  tincidunt quisque duis aliquam adipiscing. Ornare cursus erat
-                  fringilla
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-span-full flex justify-center items-center">
-          <button type="button" onClick={()=> navigate("/client/messages")} className="text-base capitalize px-7 py-2 font-normal transition text-white bg-[#4632A8] hover:bg-[#4632A8]/80 active:bg-[#4632A8]/80 rounded-lg">
-            accept
-          </button>
-        </div>
+        <fieldset className="space-y-2">
+          <InputField
+            id="country"
+            type="text"
+            htmlFor="country"
+            label="country"
+            labelClass="capitalize text-base lg:text-xl"
+            placeholder="Nigeria"
+            className="block w-full px-5 rounded-lg border-0 py-2.5 sm:py-4 md:py-3 xl:py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] text-base sm:leading-6 outline-none"
+          />
+        </fieldset>
       </div>
-    </div>
+
+      <Button
+        type="button"
+        className="bg-[#4632A8] hover:bg-[#4632A8]/70 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4632A8]/70 active:bg-[#4632A8] transform hover:-translate-y-0.5 text-white capitalize mt-6 text-base font-normal rounded-lg py-2.5 px-5"
+      >
+        update
+      </Button>
+    </form>
   );
 };

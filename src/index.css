@@ -77,6 +77,18 @@
   .rdp-button {
     @apply rounded-full;
   }
+
+  td{
+    @apply py-4;
+  }
+
+  td:nth-child(1){
+    @apply px-4;
+  }
+
+  td:nth-child(4){
+    @apply pr-4;
+  }
 }
 
 @layer components {

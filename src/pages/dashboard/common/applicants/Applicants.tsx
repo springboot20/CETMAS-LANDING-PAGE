@@ -35,9 +35,7 @@ export const TalentCard = () => {
       </div>
 
       <div className="text-center">
-        <h3 className="capitalize text-base sm:text-lg lg:text-2xl font-bold">
-          jane willams
-        </h3>
+        <h3 className="capitalize text-base sm:text-lg lg:text-2xl font-bold">jane willams</h3>
         <h2 className="text-base sm:text-lg lg:text-xl capitalize font-bold">
           mobile app developer
         </h2>
@@ -47,7 +45,7 @@ export const TalentCard = () => {
         <button
           onClick={() => {
             pathname.includes("/client")
-              ? navigate("/client/profile")
+              ? navigate("/client/applicants/:id")
               : navigate("/admin/profile");
           }}
           className="px-8 text-base sm:text-lg font-normal py-2.5 text-white rounded-lg bg-[#4632A8] focus:border-0 focus:ring-2 focus:ring-offset-1 focus:ring-[#4632A8] hover:bg-[#4632A8]/80 transition active:bg-[#4632A8]"

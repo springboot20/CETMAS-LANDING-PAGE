@@ -18,14 +18,14 @@ export const WithdrawModal: React.FC<{
       <DialogBackdrop className="fixed inset-0 bg-black/30" />
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4">
-          <DialogPanel className="h-auto p-8 lg:p-10 bg-white shadow-lg rounded-xl flex-1 max-w-2xl items-center">
+          <DialogPanel className="h-auto p-6 sm:p-10 bg-white shadow-lg rounded-xl flex-1 max-w-2xl items-center">
             <header className="text-center">
-              <h1 className="text-base ont-normal capitalize sm:text-lg lg:text-2xl sm:font-semibold">
+              <h1 className="text-lg font-semibold capitalize sm:text-xl lg:text-2xl">
                 withdrawal details
               </h1>
             </header>
-            <form>
-              <div className="space-y-10">
+            <form className="mt-4">
+              <div className="space-y-6 md:space-y-10">
                 <fieldset className="space-y-2">
                   <InputField
                     id="full-name"
@@ -62,7 +62,7 @@ export const WithdrawModal: React.FC<{
                   />
                 </fieldset>
               </div>
-              <div className="mx-auto w-full flex items-center justify-center mt-10">
+              <div className="mx-auto w-full flex items-center justify-center mt-6">
                 <Button className="px-6 py-2.5 bg-[#4632A8] hover:bg-[#4632A8]/70 focus:outline-none focus:ring-[#4632A8]/70 focus:ring-2 focus:ring-offset-2 transition hover:-translate-y-0.5 active:bg-[#4632A8] text-white text-base sm:text-lg font-normal capitalize rounded-lg">
                   withdraw
                 </Button>
