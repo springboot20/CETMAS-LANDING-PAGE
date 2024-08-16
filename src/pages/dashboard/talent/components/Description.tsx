@@ -58,7 +58,7 @@ import { Modal } from "@/components/modal/Modal";
   return (
     <>
       <Modal isOpen={isOpen} close={handleClose} />
-      <section className="mt-32 p-4 lg:px-10">
+      <section className="mt-24 p-4 lg:px-10">
         <div className="space-y-10">
           <Card className="bg-[#A79BE1B2]/20 rounded-xl px-10">
             <header className="flex justify-between items-start">

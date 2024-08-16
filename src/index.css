@@ -89,6 +89,10 @@
   td:nth-child(4){
     @apply pr-2 sm:pr-4;
   }
+
+ tr {
+    @apply mt-4;
+  }
 }
 
 @layer components {

@@ -37,7 +37,7 @@ const Profile: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   return (
-    <section className="mt-32 px-4 xl:px-10">
+    <section className="mt-24 px-4 xl:px-10">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 xl:gap-14">
         <div className="space-y-10 col-span-full lg:col-span-2">
           <div className="flex items-center justify-center flex-col">

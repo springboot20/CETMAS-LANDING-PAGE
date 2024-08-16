@@ -2,7 +2,7 @@ import React from "react";
 
 const RecommendedTalents: React.FC = () => {
   return (
-    <section className="mt-32 px-4 lg:px-10">
+    <section className="mt-24 px-4 lg:px-10">
       <div className="mx-auto">
         <h1 className="text-base sm:text-xl lg:text-2xl font-semibold mb-4">List of Talents</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">

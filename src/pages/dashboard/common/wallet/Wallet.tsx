@@ -30,7 +30,7 @@ const Wallet: React.FC = () => {
   return (
     <>
       <WithdrawModal isOpen={open} close={handleClose} />
-      <section className="mt-32 px-4 lg:px-10">
+      <section className="mt-24 px-2 sm:px-4 lg:px-10">
         <div className="mx-auto space-y-10">
           <div className="space-y-10">
             <Card className="relative bg-[#4632A8] rounded-3xl xl:p-12">
@@ -151,24 +151,40 @@ const Wallet: React.FC = () => {
 
             <div className="mt-5 space-y-2">
               <div>
-                <table className="min-w-full border-spacing-10">
-                  <thead>
-                    <tr className="text-left capitalize text-sm sm:text-base font-semibold">
-                      <th className="px-2 sm:px-0">Amount</th>
-                      <th className="px-2 sm:px-0">Date</th>
-                      <th className="px-2 sm:px-0">Time</th>
-                      <th className="px-2 sm:px-0">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody className="overflow-x-auto w-full">
-                    <tr className="truncate text-ellipsis h-10 bg-white text-gray-700 text-xs sm:text-base font-semibold">
-                      <td className="rounded-tl-lg rounded-bl-lg">{formatPrice(500)}</td>
-                      <td className="px-2 sm:px-0">2024-05-28</td>
-                      <td className="px-2 sm:px-0">11:45 am</td>
-                      <td className="rounded-tr-lg rounded-br-lg">Successful</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <ul className="min-w-full border-spacing-10">
+                  <li className="w-full text-left truncate flex items-center justify-center p-2 sm:p-4 lg:py-3 lg:px-20 text-ellipsis h-14 bg-white text-gray-700 text-xs sm:text-base font-semibold mb-3">
+                    <span className="w-full">Amount</span>
+                    <span className="w-full">Date</span>
+                    <span className="w-full">Time</span>
+                    <span className="w-full">Status</span>
+                  </li>
+                  <ul className="overflow-x-auto w-full space-y-2">
+                    <li className="truncate flex items-center justify-center p-2 sm:p-4 lg:py-3 lg:px-20 text-ellipsis h-14 bg-white text-gray-500 gap-2 font-light sm:text-base sm:font-medium">
+                      <span className="w-full">{formatPrice(500)}</span>
+                      <span className="w-full">2024-05-28</span>
+                      <span className="w-full">11:45 am</span>
+                      <span className="w-full">Successful</span>
+                    </li>
+                    <li className="truncate flex items-center justify-center p-2 sm:p-4 lg:py-3 lg:px-20 text-ellipsis h-14 bg-white text-gray-500 gap-2 font-light sm:text-base sm:font-medium">
+                      <span className="w-full">{formatPrice(500)}</span>
+                      <span className="w-full">2024-05-28</span>
+                      <span className="w-full">11:45 am</span>
+                      <span className="w-full">Successful</span>
+                    </li>
+                    <li className="truncate flex items-center justify-center p-2 sm:p-4 lg:py-3 lg:px-20 text-ellipsis h-14 bg-white text-gray-500 gap-2 font-light sm:text-base sm:font-medium">
+                      <span className="w-full">{formatPrice(500)}</span>
+                      <span className="w-full">2024-05-28</span>
+                      <span className="w-full">11:45 am</span>
+                      <span className="w-full">Failed</span>
+                    </li>
+                    <li className="truncate flex items-center justify-center p-2 sm:p-4 lg:py-3 lg:px-20 text-ellipsis h-14 bg-white text-gray-500 gap-2 font-light sm:text-base sm:font-medium">
+                      <span className="w-full">{formatPrice(500)}</span>
+                      <span className="w-full">2024-05-28</span>
+                      <span className="w-full">11:45 am</span>
+                      <span className="w-full">Successful</span>
+                    </li>
+                  </ul>
+                </ul>
               </div>
             </div>
           </div>
@@ -179,3 +195,4 @@ const Wallet: React.FC = () => {
 };
 
 export default Wallet;
+

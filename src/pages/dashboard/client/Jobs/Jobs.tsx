@@ -30,7 +30,7 @@ import { Completed } from "@/components/modal/Completed";
   return (
     <>
       <Completed isOpen={open} setStatus={setJobStatus} close={handleClose} />
-      <section className="mt-32 px-4 lg:px-10">
+      <section className="mt-24 px-4 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 sm:gap-8">
           <div className="md:col-span-2">
             <header className="flex items-center justify-between">

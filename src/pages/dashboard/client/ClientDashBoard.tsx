@@ -5,7 +5,7 @@ import { RecommendedTalents } from "./components/Recommended";
 
  const ClientDashBoard: React.FC = () => {
   return (
-    <section className="mt-32 px-4 lg:px-10">
+    <section className="mt-24 px-4 lg:px-10">
       <div className="mx-auto space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
           <Card

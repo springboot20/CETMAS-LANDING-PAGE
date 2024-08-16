@@ -6,7 +6,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
  const ClientMessages: React.FC = () => {
   return (
-    <section className="mt-32 px-4 lg:px-20">
+    <section className="mt-24 px-4 lg:px-20">
       <div className="lg:flex lg:items-center lg:justify-center">
         <Card className="bg-[#A79BE1B2]/30 w-full h-screen rounded-xl lg:h-auto lg:rounded-2xl flex flex-col flex-grow mx-auto bg-white shadow-xl overflow-hidden">
           <div className="flex flex-col flex-grow p-4 overflow-auto gap-10">
