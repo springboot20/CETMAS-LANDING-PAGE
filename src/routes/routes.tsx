@@ -52,6 +52,7 @@ import { AdminLogin } from "@/pages/Talent/landing-page/components/forms/AdminLo
 // others
 const Applicants = lazy(() => import("@/pages/dashboard/common/applicants/Applicants"));
 const Talents = lazy(() => import("@/pages/Talent/landing-page/talents/Talents"));
+const RecommendedTalents = lazy(() => import("@/pages/dashboard/admin/talents/Recommended"));
 const Clients = lazy(() => import("@/pages/dashboard/common/clients/Clients"));
 
 // notfound {*}
@@ -240,6 +241,23 @@ export const routes = createBrowserRouter([
           {
             index: true,
             element: <Applicants />,
+          },
+          {
+            path: ":id",
+            element: (
+              <Profile>
+                <ApplicantProfile />
+              </Profile>
+            ),
+          },
+        ],
+      },
+      {
+        path: "talents",
+        children: [
+          {
+            index: true,
+            element: <RecommendedTalents />,
           },
           {
             path: ":id",

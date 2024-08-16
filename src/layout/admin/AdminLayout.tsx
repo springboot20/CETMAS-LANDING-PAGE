@@ -7,6 +7,7 @@ import {
   BellIcon,
   DashBoardIcon,
   JobIcon,
+  MagnifyingGlass,
   MessageIcon,
   SignOutIcon,
   WalletIcon,
@@ -15,8 +16,9 @@ import { classNames } from "@/util";
 import { SearchField } from "@/components/forms/SearchField/SearchField";
 import { SelectField } from "@/components/forms/SelectField/SelectField";
 import { Notification } from "@/components/panel/NotificationPanel";
+import { InputField } from "@/components/forms/TextField/InputField";
 
- const AdminLayout: React.FC = () => {
+const AdminLayout: React.FC = () => {
   const [scrolling, setScrolling] = useState<boolean>(false);
   const { pathname } = useLocation();
   const title = pathname.split("/")[2];
@@ -24,6 +26,7 @@ import { Notification } from "@/components/panel/NotificationPanel";
   const [openNotification, setOpenNotification] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClose = () => {
     setOpen(false);
@@ -52,9 +55,6 @@ import { Notification } from "@/components/panel/NotificationPanel";
       break;
     case "jobs":
       displayText = "List of Jobs";
-      break;
-    case "messages":
-      displayText = "";
       break;
     case "wallet":
       displayText = "Wallet";
@@ -121,7 +121,7 @@ import { Notification } from "@/components/panel/NotificationPanel";
                       <h3 className="text-xl sm:text-3xl font-bold lg:text-2xl xl:text-4xl text-gray-800">
                         {!pathname.includes("/jobs/:id") && displayText}
                         {pathname.split("/")[3] && !pathname.includes("/jobs/:id") && "Profile"}
-                        {pathname.includes("/jobs/:id")  && "Job Description"}
+                        {pathname.includes("/jobs/:id") && "Job Description"}
                       </h3>
                     </div>
                     {title === "clients" && !pathname.split("/")[3] ? (
@@ -136,7 +136,7 @@ import { Notification } from "@/components/panel/NotificationPanel";
                     ) : null}
                   </div>
 
-                  {pathname.includes("/jobs") && !pathname.includes("/jobs/:id")  && (
+                  {pathname.includes("/jobs") && !pathname.includes("/jobs/:id") && (
                     <div className="hidden lg:flex items-center space-x-3">
                       <div className="hidden lg:block">
                         <SearchField ref={searchInputRef} />
@@ -149,6 +149,30 @@ import { Notification } from "@/components/panel/NotificationPanel";
                       </SelectField>
 
                       {/* <Combobox value={''} options={options} placeholder={'Newer'} onChange={()=> console.log('hello world')}/> */}
+                    </div>
+                  )}
+
+                  {pathname.includes("/talents") && (
+                    <div className="hidden lg:flex items-center space-x-3">
+                      <div className="hidden lg:flex flex-1 items-center w-full lg:w-[25rem] xl:w-[40rem] h-14 bg-white shadow-sm rounded-xl">
+                        <InputField
+                          ref={inputRef}
+                          label="Search"
+                          placeholder="Search for skills"
+                          htmlFor="search"
+                          labelClass="hidden"
+                          className="h-full flex-1 block w-full border-0 focus:outline-none focus:border-none focus:ring-0 rounded-tl-xl rounded-bl-xl text-lg font-normal pl-6 pr-2 text-gray-700"
+                        />
+                        <button
+                          className="flex px-3 items-center justify-center"
+                          onClick={() => {
+                            inputRef.current?.focus();
+                          }}
+                        >
+                          <span className="sr-only">search</span>
+                          <MagnifyingGlass className="h-7 cursor-pointer" />
+                        </button>
+                      </div>
                     </div>
                   )}
 
@@ -184,4 +208,4 @@ import { Notification } from "@/components/panel/NotificationPanel";
   );
 };
 
-export default AdminLayout
+export default AdminLayout;
