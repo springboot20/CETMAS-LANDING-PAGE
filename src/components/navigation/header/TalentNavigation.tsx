@@ -49,7 +49,7 @@ export const TalentNavigation = () => {
   return (
     <header
       className={classNames(
-        "fixed top-0 right-0 h-20 sm:h-24 left-0 lg:left-36 bg-[#F9F9F9] px-10 z-20",
+        "fixed top-0 right-0 h-20 sm:h-24 left-0 lg:left-36 bg-[#F9F9F9] px-4 xl:px-10 z-20",
         scrolling ? "lg:bg-[#F9F9F9]" : "g:bg-transparent",
       )}
     >

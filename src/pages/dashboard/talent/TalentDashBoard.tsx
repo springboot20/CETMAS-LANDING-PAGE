@@ -7,7 +7,7 @@ import { Calendar } from "@/components/calender/Calendar";
 
 const TalentDashBoard: React.FC = () => {
   return (
-    <section className="mt-24 px-4 lg:px-10">
+    <section className="mt-24 px-4 xl:px-10 lg:px-10">
       <div className="mx-auto space-y-10">
         <div className="flex items-stretch flex-wrap gap-2 flex-col 2xl:flex-row xl:items-start max-w-xl mx-auto md:max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 flex-1 2xl:self-center w-full">

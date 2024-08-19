@@ -7,7 +7,7 @@ const AdminDashBoard: React.FC = () => {
 const navigate = useNavigate()
 
   return (
-    <section className="mt-24 px-4 relative z-10 w-full flex lg:justify-between flex-col xl:flex-row xl:gap-3 items-stretch h-screen flex-shrink-0">
+    <section className="mt-24 px-4 xl:px-10 relative z-10 w-full flex lg:justify-between flex-col xl:flex-row xl:gap-3 items-stretch h-screen flex-shrink-0">
       <div className="space-y-6 flex-shrink-0 max-w-5xl w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Card className={"bg-[#9747FF66]"} title={"total talents"} count={30} />

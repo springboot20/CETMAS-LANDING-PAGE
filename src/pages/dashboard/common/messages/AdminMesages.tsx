@@ -20,7 +20,7 @@ const AdminMessages: React.FC = () => {
   };
 
   return (
-    <section className="mt-24 px-4">
+    <section className="mt-24 px-4 xl:px-10">
       {
         <button
           onClick={() => setIsPanelOpen(true)}
