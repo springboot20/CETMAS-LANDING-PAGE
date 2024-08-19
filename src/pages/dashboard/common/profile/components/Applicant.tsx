@@ -91,7 +91,7 @@ import { useLocation, useNavigate } from "react-router-dom";
         <div className="col-span-full flex justify-center items-center">
           <button
             type="button"
-            onClick={() => navigate("/client")}
+            onClick={() => navigate("/client/messages")}
             className="text-base capitalize px-7 py-2 font-normal transition text-white bg-[#4632A8] hover:bg-[#4632A8]/80 active:bg-[#4632A8]/80 rounded-lg"
           >
             accept

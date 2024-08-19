@@ -34,7 +34,11 @@ export const ClientNavigation = () => {
       }
       break;
 
-    case "clients":
+    case "profile":
+      displayTitle = "Profile";
+      break;
+
+    case "applicants":
       if (subRouteTitle === "profile") {
         displayTitle = "Profile";
       }
