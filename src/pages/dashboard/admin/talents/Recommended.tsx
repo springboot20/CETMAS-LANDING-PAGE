@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const RecommendedTalents: React.FC = () => {
   return (
@@ -27,7 +28,7 @@ const RecommendedTalents: React.FC = () => {
 export default RecommendedTalents;
 
 const TalentCard = () => {
-
+  const navigate  = useNavigate()
   return (
     <div className="p-8 rounded-2xl bg-white border shadow-sm flex flex-col space-y-10 items-center justify-center">
       <div>
@@ -43,10 +44,10 @@ const TalentCard = () => {
 
       <div className="flex jusify-center items-center mx-auto">
         <button
-          onClick={() =>console.log("recommended")}
+          onClick={() => navigate("/admin/talents/profile")}
           className="px-6 text-base capitalize sm:text-lg font-normal py-2.5 text-white rounded-lg bg-[#4632A8] focus:border-0 focus:ring-0 hover:bg-[#4632A8]/80 transition active:bg-[#4632A8]"
         >
-          recommended
+          View Profile
         </button>
       </div>
     </div>

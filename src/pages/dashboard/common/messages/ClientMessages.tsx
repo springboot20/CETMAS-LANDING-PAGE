@@ -8,7 +8,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
   return (
     <section className="mt-24 px-4 lg:px-20">
       <div className="lg:flex lg:items-center lg:justify-center">
-        <Card className="bg-[#A79BE1B2]/30 w-full h-screen rounded-xl lg:h-auto lg:rounded-2xl flex flex-col flex-grow mx-auto bg-white shadow-xl overflow-hidden">
+        <div className="bg-[#A79BE1B2] border w-full h-screen rounded-xl lg:h-auto lg:rounded-2xl flex flex-col flex-grow mx-auto bg-white overflow-hidden">
           <div className="flex flex-col flex-grow p-4 overflow-auto gap-10">
             <div className="flex w-full mt-2 gap-2 max-w-xl lg:max-w-3xl">
               <div className="flex flex-col items-center text-center gap-1">
@@ -69,7 +69,7 @@ import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
               </fieldset>
             </div>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );

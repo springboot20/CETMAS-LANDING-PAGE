@@ -1,8 +1,11 @@
 import React from "react";
 import { classNames } from "@/util";
 import { StarIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 const AdminDashBoard: React.FC = () => {
+const navigate = useNavigate()
+
   return (
     <section className="mt-24 px-4 relative z-10 w-full flex lg:justify-between flex-col xl:flex-row xl:gap-3 items-stretch h-screen flex-shrink-0">
       <div className="space-y-6 flex-shrink-0 max-w-5xl w-full">
@@ -241,6 +244,7 @@ const AdminDashBoard: React.FC = () => {
             <h1 className="text-base sm:text-xl font-semibold text-[#4632A8]">Lists of Talents</h1>
             <button
               type="button"
+              onClick={()=> navigate("/admin/talents")}
               className="py-2 px-3 rounded-md text-sm font-semibold text-white bg-[#4632A8]"
             >
               View all
@@ -352,6 +356,7 @@ const AdminDashBoard: React.FC = () => {
             <h1 className="text-base sm:text-xl font-semibold text-[#4632A8]">Lists of Clients</h1>
             <button
               type="button"
+              onClick={()=> navigate("/admin/clients")}
               className="py-2 px-3 rounded-md text-sm font-semibold text-white bg-[#4632A8]"
             >
               View all

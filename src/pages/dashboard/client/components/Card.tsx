@@ -3,6 +3,7 @@ import { Card } from "@/components/card/Card";
 import { MapPinIcon } from "@/components/Icons";
 import { Button } from "@/components/button/Button";
 import { ClientJobs } from "@/types/jobs";
+import { TrashIcon } from "@heroicons/react/24/outline";
 
 export const JobCard: React.FC<ClientJobs> = (props) => {
   return (
@@ -17,18 +18,7 @@ export const JobCard: React.FC<ClientJobs> = (props) => {
         </div>
         <button type="button" onClick={() => console.log("deleted")}>
           <span className="sr-only">favorite icon</span>
-          <svg
-            width="14"
-            height="16"
-            viewBox="0 0 14 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.616 16.0005C2.15533 16.0005 1.771 15.8465 1.463 15.5385C1.155 15.2305 1.00067 14.8458 1 14.3845V2.00047H0V1.00047H4V0.230469H10V1.00047H14V2.00047H13V14.3855C13 14.8455 12.846 15.2298 12.538 15.5385C12.23 15.8471 11.8453 16.0011 11.384 16.0005H2.616ZM4.808 13.0005H5.808V4.00047H4.808V13.0005ZM8.192 13.0005H9.192V4.00047H8.192V13.0005Z"
-              fill="black"
-            />
-          </svg>
+          <TrashIcon className="h-7" />
         </button>
       </header>
       <div className="py-7">

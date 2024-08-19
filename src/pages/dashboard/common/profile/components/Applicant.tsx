@@ -1,7 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
  const ApplicantProfile = () => {
   const navigate= useNavigate()
+  const {pathname} = useLocation()
 
   return (
     <div className="bg-[#A79BE1]/20 rounded-2xl px-4 lg:px-8 py-7">
@@ -90,7 +91,7 @@ import { useNavigate } from "react-router-dom";
         <div className="col-span-full flex justify-center items-center">
           <button
             type="button"
-            onClick={() => navigate("/client/messages")}
+            onClick={() => navigate("/client")}
             className="text-base capitalize px-7 py-2 font-normal transition text-white bg-[#4632A8] hover:bg-[#4632A8]/80 active:bg-[#4632A8]/80 rounded-lg"
           >
             accept

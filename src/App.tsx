@@ -6,7 +6,7 @@ import { Loader } from "./components/Loader";
 export default function App() {
   return (
     <Suspense fallback={<Loader />}>
-      <RouterProvider router={routes} />;
+      <RouterProvider router={routes} />
     </Suspense>
   );
 }

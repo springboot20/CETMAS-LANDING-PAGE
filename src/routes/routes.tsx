@@ -166,7 +166,7 @@ export const routes = createBrowserRouter([
             element: <Applicants />,
           },
           {
-            path: ":id",
+            path: "profile",
             element: (
               <Profile>
                 <ApplicantProfile />
@@ -243,7 +243,7 @@ export const routes = createBrowserRouter([
             element: <Applicants />,
           },
           {
-            path: ":id",
+            path: "profile",
             element: (
               <Profile>
                 <ApplicantProfile />
@@ -260,7 +260,7 @@ export const routes = createBrowserRouter([
             element: <RecommendedTalents />,
           },
           {
-            path: ":id",
+            path: "profile",
             element: (
               <Profile>
                 <ApplicantProfile />
@@ -277,7 +277,7 @@ export const routes = createBrowserRouter([
             element: <Clients />,
           },
           {
-            path: ":id",
+            path: "profile",
             element: (
               <Profile>
                 <AdminProfile />

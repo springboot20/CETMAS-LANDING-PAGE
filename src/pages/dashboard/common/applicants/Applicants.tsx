@@ -44,7 +44,7 @@ const TalentCard = () => {
 
       <div className="flex jusify-center items-center mx-auto">
         <button
-          onClick={() => navigate("/client/applicants/:id")}
+          onClick={() => navigate("/client/applicants/profile")}
           className="px-8 text-base sm:text-lg font-normal py-2.5 text-white rounded-lg bg-[#4632A8] focus:border-0 focus:ring-2 focus:ring-offset-1 focus:ring-[#4632A8] hover:bg-[#4632A8]/80 transition active:bg-[#4632A8]"
         >
           View profile

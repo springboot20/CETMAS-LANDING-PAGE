@@ -12,7 +12,7 @@ export const SearchField = forwardRef((_, ref) => {
   }));
 
   return (
-    <div className='flex flex-1 items-center w-full lg:w-[25rem] xl:w-[40rem] h-14 bg-white shadow-sm rounded-xl'>
+    <div className='flex flex-1 items-center w-full lg:w-[25rem] xl:w-[30rem] h-14 lg:h-16 bg-white shadow-sm rounded-md border'>
       <InputField
         ref={inputRef}
         label='Search'
