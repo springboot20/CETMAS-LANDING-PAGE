@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { InputField } from "@/components/forms/TextField/InputField";
 import { ChangeEvent, TalentFormInitialValues } from "@/util/formik";
 import { useNavigate } from "react-router-dom";
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import { classNames } from "@/util";
 
 const initialValues: TalentFormInitialValues = {
   "first-name": "",
@@ -43,13 +45,15 @@ export const TalentForm: React.FC = () => {
   const steps: JSX.Element[] = [
     <SocialForm key={"social"} values={values} handleChange={handleChange} />,
     <AuthForm key={"auth"} values={values} handleChange={handleChange} />,
-    <ContactForm key={"contact"} values={values} handleChange={handleChange} />,
-    <BioForm key={"bio"} values={values} handleChange={handleChange} />,
     <OtherForm key={"other-form"} values={values} handleChange={handleChange} />,
   ];
 
   const handleNextStep = (): void => {
     setCurrentStep((prevStep) => Math.min(prevStep + 1, steps.length - 1));
+  };
+
+  const handlePrevStep = (): void => {
+    setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
   };
 
   const variants = {
@@ -80,32 +84,56 @@ export const TalentForm: React.FC = () => {
             </h1>
           </header>
           <form className="w-full" onSubmit={handleSubmit}>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentStep}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={variants}
-                transition={{ duration: 0.5 }}
-                className=""
-              >
-                {steps[currentStep]}
-              </motion.div>
-            </AnimatePresence>
+            <div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentStep}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  variants={variants}
+                  transition={{ duration: 0.5 }}
+                  className=""
+                >
+                  {steps[currentStep]}
+                </motion.div>
+              </AnimatePresence>
 
-            {currentStep < steps.length - 1 ? (
-              <button
-                type="button"
-                onClick={handleNextStep}
-                className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto lg:w-1/3 xl:mt-12"
-              >
-                Next
-              </button>
-            ) : (
+              <div className="mt-4 flex items-center justify-between">
+                {currentStep > 0 && (
+                  <button
+                    type="button"
+                    onClick={handlePrevStep}
+                    className="flex py-3 gap-3 items-center text-[#4632A8] text-sm sm:text-base font-semibold rounded-md transition focus:outline-none focus:ring-0"
+                  >
+                    <ArrowLeftIcon className="h-5" />
+                    Previous
+                  </button>
+                )}
+
+                {currentStep < steps.length - 1 && (
+                  <>
+                    <div></div>
+                    <button
+                      type="button"
+                      onClick={handleNextStep}
+                      className={classNames(
+                        "flex py-3 gap-3 items-center text-[#4632A8] text-sm sm:text-base font-semibold rounded-md transition focus:outline-none focus:ring-0",
+                        currentStep < steps.length - 1 ? "justify-end" : "",
+                      )}
+                    >
+                      Next
+                      <ArrowRightIcon className="h-5" />
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+
+            {currentStep === steps.length - 1 && (
               <button
                 type="submit"
-                className="capitalize block py-3 w-full mt-8 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto xl:py-3.5 lg:text-lg lg:w-2/3 xl:mt-12"
+                className="capitalize block py-3 w-full mt-8 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-0 sm:mt-4 md:py-2.5 lg:mx-auto xl:py-3.5 lg:text-lg lg:w-2/3 "
               >
                 sign up
               </button>
@@ -226,69 +254,12 @@ const AuthForm = ({
         />
       </fieldset>
 
-      <fieldset className="space-y-2">
-        <InputField
-          id="phone-number"
-          type="tel"
-          placeholder="+2348012345678"
-          htmlFor="phone-number"
-          label="phone number"
-          name="phone-number"
-          value={values["phone-number"]}
-          onChange={handleChange}
-          labelClass="capitalize"
-          className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-sm sm:leading-6 focus:outline-none"
-        />
-      </fieldset>
+      <TelephoneInput />
     </div>
   );
 };
 
-const ContactForm = ({
-  values,
-  handleChange,
-}: {
-  handleChange: ChangeEvent;
-  values: {
-    [key: string]: string;
-  };
-}) => (
-  <div className="space-y-3 lg:space-y-5">
-    <fieldset className="space-y-2">
-      <label
-        htmlFor="profession"
-        className="text-sm font-semibold text-gray-700 sm:text-base block"
-      >
-        Profession
-      </label>
-      <input
-        type="text"
-        id="profession"
-        name="profession"
-        value={values.profession}
-        onChange={handleChange}
-        placeholder="List of profession"
-        className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-sm sm:leading-6 focus:outline-none"
-      />
-    </fieldset>
-
-    <fieldset className="space-y-2">
-      <InputField
-        id="location"
-        type="text"
-        htmlFor="location"
-        label="location"
-        placeholder="List of states"
-        labelClass="capitalize"
-        value={values.location}
-        onChange={handleChange}
-        className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-sm sm:leading-6 focus:outline-none"
-      />
-    </fieldset>
-  </div>
-);
-
-const BioForm = ({
+const OtherForm = ({
   values,
   handleChange,
 }: {
@@ -314,32 +285,6 @@ const BioForm = ({
 
     <fieldset className="space-y-2">
       <InputField
-        id="cv"
-        type="file"
-        multiple
-        max={3}
-        htmlFor="cv"
-        label="CV"
-        placeholder="Upload a google drive link of your CV"
-        labelClass="capitalize"
-        className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-sm sm:leading-6 focus:outline-none"
-      />
-    </fieldset>
-  </div>
-);
-
-const OtherForm = ({
-  values,
-  handleChange,
-}: {
-  handleChange: ChangeEvent;
-  values: {
-    [key: string]: string;
-  };
-}) => (
-  <div className="space-y-3 lg:space-y-5">
-    <fieldset className="space-y-2">
-      <InputField
         id="portfolio"
         type="text"
         htmlFor="portfolio"
@@ -351,18 +296,66 @@ const OtherForm = ({
         className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-sm sm:leading-6 focus:outline-none"
       />
     </fieldset>
-    <fieldset className="space-y-2">
-      <InputField
-        id="bio"
-        type="text"
-        htmlFor="bio"
-        label="bio"
-        value={values.bio}
-        onChange={handleChange}
-        placeholder="What do you want client to know about you"
-        labelClass="capitalize"
-        className="block w-full px-4 rounded-md border-0 py-2.5 sm:py-4 md:py-3 text-base font-normal xl:py-5 text-gray-800 shadow-sm ring-[1.15px] ring-inset ring-gray-800 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#4632A8] sm:text-base sm:leading-6 focus:outline-none"
-      />
-    </fieldset>
   </div>
 );
+
+interface CountryCode {
+  code: string;
+  name: string;
+}
+
+const countryCodes: CountryCode[] = [
+  { code: "+1", name: "United States" },
+  { code: "+44", name: "United Kingdom" },
+  { code: "+234", name: "Nigeria" },
+  { code: "+91", name: "India" },
+  // Add more country codes as needed
+];
+
+export const TelephoneInput: React.FC = () => {
+  const [selectedCode, setSelectedCode] = useState<string>(countryCodes[0].code);
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+
+  const handleCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCode(e.target.value);
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  return (
+    <div className="flex items-center border border-gray-800 rounded-md overflow-hidden focus-within:ring-2 focus-within:ring-[#4632A8] focus-within:border-transparent h-16">
+      <div className="relative flex items-center h-full">
+        <select
+          value={selectedCode}
+          onChange={handleCodeChange}
+          className="h-full appearance-none bg-white border-none text-gray-900 pl-3 pr-8 leading-tight focus:outline-none focus:ring-0"
+          style={{ width: "5rem" }} // Adjust this value to control the width
+        >
+          {countryCodes.map((country) => (
+            <option key={country.code} value={country.code}>
+              {country.code}
+            </option>
+          ))}
+        </select>
+        <div className="pointer-events-none absolute right-0 pr-2 text-gray-700">
+          <svg
+            className="fill-current h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M5.293 7.293L9.293 11.293C9.683 11.683 10.317 11.683 10.707 11.293L14.707 7.293C15.098 6.902 14.855 6.268 14.293 6.268L5.707 6.268C5.145 6.268 4.902 6.902 5.293 7.293Z" />
+          </svg>
+        </div>
+      </div>
+      <input
+        type="tel"
+        value={phoneNumber}
+        onChange={handlePhoneChange}
+        placeholder="Enter phone number"
+        className="block w-full h-full px-4 py-2 border-none focus:outline-none focus:ring-0"
+      />
+    </div>
+  );
+};

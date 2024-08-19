@@ -6,6 +6,8 @@ import { InputField } from "@/components/forms/TextField/InputField";
 import { Link, useNavigate } from "react-router-dom";
 import { FormikHelpers, useFormik } from "formik";
 import { ChangeEvent, ClientFormInitialValues } from "@/util/formik";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import { classNames } from "@/util";
 
 const initialValues: ClientFormInitialValues = {
   "full-name": "",
@@ -42,6 +44,9 @@ export const ClientForm: React.FC = () => {
   const handleNextStep = (): void => {
     setCurrentStep((prevStep) => Math.min(prevStep + 1, steps.length - 1));
   };
+  const handlePrevStep = (): void => {
+    setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
+  };
 
   const variants = {
     initial: { opacity: 0 },
@@ -72,32 +77,55 @@ export const ClientForm: React.FC = () => {
             </h1>
           </header>
           <form className="w-full" onSubmit={handleSubmit}>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentStep}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={variants}
-                transition={{ duration: 0.5 }}
-                className=""
-              >
-                {steps[currentStep]}
-              </motion.div>
-            </AnimatePresence>
+            <div className="">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentStep}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  variants={variants}
+                  transition={{ duration: 0.5 }}
+                  className=""
+                >
+                  {steps[currentStep]}
+                </motion.div>
+              </AnimatePresence>
 
-            {currentStep < steps.length - 1 ? (
-              <button
-                type="button"
-                onClick={handleNextStep}
-                className="block py-3 w-full mt-4 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto lg:w-1/3 xl:mt-12"
-              >
-                Next
-              </button>
-            ) : (
+              <div className="mt-4 flex items-center justify-between">
+                {currentStep > 0 && (
+                  <button
+                    type="button"
+                    onClick={handlePrevStep}
+                    className="flex py-3 gap-3 items-center text-[#4632A8] text-sm sm:text-base font-semibold rounded-md transition focus:outline-none focus:ring-0"
+                  >
+                    <ArrowLeftIcon className="h-5" />
+                    Previous
+                  </button>
+                )}
+
+                {currentStep < steps.length - 1 && (
+                  <>
+                    <div></div>
+                    <button
+                      type="button"
+                      onClick={handleNextStep}
+                      className={classNames(
+                        "flex py-3 gap-3 items-center text-[#4632A8] text-sm sm:text-base font-semibold rounded-md transition focus:outline-none focus:ring-0",
+                        currentStep < steps.length - 1 ? "justify-end" : "",
+                      )}
+                    >
+                      Next
+                      <ArrowRightIcon className="h-5" />
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
+            {currentStep === steps.length - 1 && (
               <button
                 type="submit"
-                className="block py-3 w-full mt-8 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition shadow-md hover:bg-[#4632A8]/80 active:bg-[#4632A8] focus:ring-outline-none focus:ring-0 tracking-wider sm:mt-4 md:py-2.5 lg:mx-auto xl:py-3.5 lg:text-lg lg:w-2/3 xl:mt-12"
+                className="block py-3 w-full mt-8 bg-[#4632A8] text-white text-sm sm:text-base font-semibold rounded-md transition focus:ring-outline-none focus:ring-0 sm:mt-4 md:py-2.5 lg:mx-auto xl:py-3.5 lg:text-lg lg:w-2/3"
               >
                 Sign Up
               </button>
@@ -110,7 +138,7 @@ export const ClientForm: React.FC = () => {
 };
 
 const SocialForm: React.FC<{
-  handleChange: ChangeEvent
+  handleChange: ChangeEvent;
   values: {
     [key: string]: string;
   };
@@ -161,7 +189,7 @@ const SocialForm: React.FC<{
 );
 
 const ContactForm: React.FC<{
-  handleChange: ChangeEvent
+  handleChange: ChangeEvent;
   values: {
     [key: string]: string;
   };
