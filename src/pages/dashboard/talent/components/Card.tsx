@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Card } from "@/components/card/Card";
 import { MapPinIcon } from "@/components/Icons";
 import { Button } from "@/components/button/Button";
 import { TalentJobProps } from "@/types/jobs";
