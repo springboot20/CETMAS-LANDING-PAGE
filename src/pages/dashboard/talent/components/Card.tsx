@@ -5,12 +5,17 @@ import { Button } from "@/components/button/Button";
 import { TalentJobProps } from "@/types/jobs";
 import { classNames } from "@/util";
 import { HeartIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 export const JobCard: React.FC<TalentJobProps> = (props) => {
   const [favorite, setFavorite] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   return (
-    <Card className="bg-[#A79BE1B2]/20 rounded-xl px-6 md:px-10">
+    <div
+      className="cursor-pointer bg-[#A79BE1B2]/20 rounded-xl p-6 md:p-10"
+      onClick={() => navigate("/talent/jobs/:id")}
+    >
       <header className="flex justify-between items-start">
         <div className="space-y-2">
           <h1 className="text-xl lg:text-3xl font-bold capitalize">{props.title}</h1>
@@ -45,6 +50,6 @@ export const JobCard: React.FC<TalentJobProps> = (props) => {
         </div>
         <p className="text-sm font-normal">Posted {props.postTime} hours ago</p>
       </div>
-    </Card>
+    </div>
   );
 };
