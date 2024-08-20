@@ -56,7 +56,7 @@ export const ClientForm: React.FC = () => {
 
   return (
     <section className="flex items-center justify-center bg-transparent p-4 sm:p-8 h-screen xl:p-0">
-      <div className="bg-white lg:bg-transparent md:shadow-lg lg:shadow-none flex-1 flex-shrink-0 max-w-xl lg:grid lg:grid-cols-2 lg:max-w-6xl gap-10 mx-auto relative">
+      <div className="bg-white border lg:bg-transparent lg:border-0 flex-1 flex-shrink-0 max-w-xl lg:grid lg:grid-cols-2 lg:max-w-6xl gap-10 mx-auto relative">
         <header className="bg-none bg-transparent hidden lg:block overflow-auto">
           <Link to="/" className="space-y-7">
             <img src={CETMASLOGO} alt="Cetmas logo" className="h-16" />
