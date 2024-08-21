@@ -7,8 +7,8 @@ const AdminDashBoard: React.FC = () => {
 const navigate = useNavigate()
 
   return (
-    <section className="mt-24 px-4 xl:px-10 relative z-10 w-full flex lg:justify-between flex-col xl:flex-row xl:gap-3 items-stretch h-screen flex-shrink-0">
-      <div className="space-y-6 flex-shrink-0 max-w-5xl w-full">
+    <section className="mt-24 px-4 xl:px-10 relative z-10 w-full flex xl:justify-between flex-col xl:flex-row xl:gap-10 items-stretch h-screen flex-shrink-0">
+      <div className="space-y-6 flex-shrink-0 w-full xl:right-[36rem] xl:w-[calc(100%-36rem)] left-0 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <Card className={"bg-[#9747FF66]"} title={"total talents"} count={30} />
 
@@ -131,7 +131,7 @@ const navigate = useNavigate()
                   height="174"
                   viewBox="0 0 326 174"
                   fill="none"
-                  className="w-64 sm:w-auto"
+                  className="w-64 sm:w-full"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path d="M24 0V150.5H325.5" stroke="black" />
@@ -238,8 +238,8 @@ const navigate = useNavigate()
         </div>
       </div>
 
-      <div className="w-full flex-shrink-0 mt-10 space-y-10 xl:max-w-xl">
-        <div className="space-y-4">
+      <div className="w-full mt-10 space-y-10 xl:max-w-xl xl:mt-0">
+        <div className="space-y-4 h-auto xl:overflow-y-auto xl:max-h-[34rem]">
           <header className="flex items-center justify-between">
             <h1 className="text-base sm:text-xl font-semibold text-[#4632A8]">Lists of Talents</h1>
             <button
@@ -252,6 +252,54 @@ const navigate = useNavigate()
           </header>
 
           <ul className="space-y-3">
+            <li className="p-4 border-[0.8px] flex-col xs:flex-row bg-white flex items-center justify-between rounded-lg">
+              <div className="flex items-center gap-9">
+                <span className="flex items-center justify-center text-white rounded-full text-base font-semibold h-8 w-8 bg-[#4632A8]">
+                  1
+                </span>
+
+                <div className="flex flex-col">
+                  <span className="text-base sm:text-xl font-bold capitalize leading-none">
+                    jane williams
+                  </span>
+                  <span className="text-base capitalize text-gray-600 font-medium">
+                    mobile app developer
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-0.5">
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+              </div>
+            </li>
+            <li className="p-4 border-[0.8px] flex-col xs:flex-row bg-white flex items-center justify-between rounded-lg">
+              <div className="flex items-center gap-9">
+                <span className="flex items-center justify-center text-white rounded-full text-base font-semibold h-8 w-8 bg-[#4632A8]">
+                  1
+                </span>
+
+                <div className="flex flex-col">
+                  <span className="text-base sm:text-xl font-bold capitalize leading-none">
+                    jane williams
+                  </span>
+                  <span className="text-base capitalize text-gray-600 font-medium">
+                    mobile app developer
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-0.5">
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+                <StarIcon className="fill-[#FCD924] h-6 sm:h-8 stroke-white" />
+              </div>
+            </li>
             <li className="p-4 border-[0.8px] flex-col xs:flex-row bg-white flex items-center justify-between rounded-lg">
               <div className="flex items-center gap-9">
                 <span className="flex items-center justify-center text-white rounded-full text-base font-semibold h-8 w-8 bg-[#4632A8]">
@@ -351,7 +399,7 @@ const navigate = useNavigate()
           </ul>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 h-auto xl:overflow-y-auto xl:max-h-[34rem]">
           <header className="flex items-center justify-between">
             <h1 className="text-base sm:text-xl font-semibold text-[#4632A8]">Lists of Clients</h1>
             <button
