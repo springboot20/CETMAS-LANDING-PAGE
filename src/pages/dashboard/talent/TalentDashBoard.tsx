@@ -3,7 +3,6 @@ import { Card } from "../../../components/card/Card";
 import { RequestedJobs } from "./components/RequestedJobs";
 import { RecommendedJobs } from "./components/RecommendedJobs";
 import { GraphIcon } from "@/components/Icons";
-import { Calendar } from "@/components/calender/Calendar";
 
 const TalentDashBoard: React.FC = () => {
   return (
