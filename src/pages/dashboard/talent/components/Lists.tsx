@@ -1,10 +1,10 @@
 import React from "react";
 import data from "@/util/data";
-import { JobCard } from "./Card"; 
+import { JobCard } from "./Card";
 
 export const JobLists: React.FC = () => {
   return (
-    <div className="col-span-2 w-full flex flex-col gap-6 px-2 h-screen job-list mt-9">
+    <div className="flex-shrink-0 relative left-0 right-0 flex-1 xl:right-[28rem] xl:max-w-[calc(100%-28rem)] space-y-3 px-2 h-screen job-list mt-20 xl:mt-0">
       {data.map((c) => (
         <JobCard key={c.id} {...c} />
       ))}

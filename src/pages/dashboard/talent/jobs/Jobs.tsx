@@ -4,8 +4,8 @@ import { JobFilter } from "../components/Filter";
 
 const Jobs: React.FC = () => {
   return (
-    <section className="mt-24 px-4 xl:px-10 lg:px-10">
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+    <section className="mt-24 px-4 xl:px-10">
+      <div className="relative flex items-stretch flex-col xl:flex-row xl:justify-between flex-shrink-0">
         <JobLists />
         <JobFilter />
       </div>
